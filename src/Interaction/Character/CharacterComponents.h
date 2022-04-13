@@ -1,11 +1,11 @@
 #pragma once
-#include "flecs.h"
+#include "flecs/flecs.h"
 
 struct CharactersComponents
 {
     enum PersonalityTypeInOutFocused
     {
-        Introversion = 0,
+        Intraversion = 0,
         Extraversion = 1
     };
     enum PersonalityTypeInformationGathering
@@ -30,13 +30,13 @@ struct CharactersComponents
     };
 
 
-    struct CharacterGeneralBackground
+    struct PlayerCharacterCreateBackground
     {
-        flecs::string name;
-        flecs::string gender;
-        flecs::string sexuality;
-        flecs::string ethnicity;
-        flecs::string description;
+        int name;
+        int gender;
+        int sexuality;
+        int ethnicity;
+        int description;
     };
 
     struct CharacterLevel
@@ -50,11 +50,14 @@ struct CharactersComponents
     {
         int race;
         int age;
+        int heritage
+        int background
         PersonalityTypeInOutFocused IorE;
         PersonalityTypeInformationGathering SorN;
         PersonalityTypeMakeDecisions TorF;
         PersonalityTypeOuterLife JorP;
     };
+
 
     struct CharacterAttributes
     {
@@ -64,6 +67,8 @@ struct CharactersComponents
         int Willpower;
         int Endurance;
         int Luck;
+        int Magic;
+        int Null;
     };
 
     struct CharacterStats
@@ -83,13 +88,15 @@ struct CharactersComponents
         int Magic;
         float MagicRegenRate;
         float MagicRegenDelay;
+        int Null;
+        float NullRegenRate;
+        float NullRegenDelay;
     };
 
-    struct CharacterResistenances
+    struct CharacterResistances
     {
-        float MagicRadiationResistance;
-        float MagicInsanityResistance;
-        float MagicStiffnessResistance;
+        float MagicResistance;
+        float NullResistance;
     };
 
     struct CharacterStatNumbers
