@@ -29,7 +29,6 @@ struct CharactersComponents
         int mindset;
     };
 
-
     struct PlayerCharacterCreateBackground
     {
         int name;
@@ -50,52 +49,111 @@ struct CharactersComponents
     {
         int race;
         int age;
-        int heritage
-        int background
+        int heritage;
+        int background;
         PersonalityTypeInOutFocused IorE;
         PersonalityTypeInformationGathering SorN;
         PersonalityTypeMakeDecisions TorF;
         PersonalityTypeOuterLife JorP;
     };
 
-
-    struct CharacterAttributes
+    struct CharacterStrengthAttribute
     {
         int Strength;
+    };
+
+    struct CharacterDexterityAttribute
+    {
         int Dexterity;
+    };
+
+    struct CharacterIntelligenceAttribute
+    {
         int Intelligence;
+    };
+
+    struct CharacterWillpowerAttribute
+    {
         int Willpower;
+    };
+
+    struct CharacterEnduranceAttribute
+    {
         int Endurance;
+    };
+
+    struct CharacterLuckAttribute
+    {
         int Luck;
+    };
+
+    struct CharacterCharismaAttribute
+    {
+        int Charisma;
+    };
+
+    struct CharacterWisdomAttribute
+    {
+        int Wisdom;
+    };
+    struct CharacterMagicAttribute
+    {
         int Magic;
+    };
+    struct CharacterNullAttribute
+    {
         int Null;
     };
 
-    struct CharacterStats
+    struct CharacterLifeStats
     {
         int Life;
         float LifeRegenRate;
         float LifeRegenDelay;
+    };
+
+    struct CharacterEnergyStats
+    {
         int Energy;
         float EnergyRegenRate;
         float EnergyRegenDelay;
+    };
+
+    struct CharacterArmourStats
+    {
         int Armour;
         float ArmourRegenRate;
         float ArmourRegenDelay;
+    };
+
+    struct CharacterShieldStats
+    {
         int Shield;
         float ShieldRegenRate;
         float ShieldRegenDelay;
+    };
+
+    struct CharacterMagicStats
+    {
         int Magic;
         float MagicRegenRate;
         float MagicRegenDelay;
+    };
+
+    struct CharacterNullStats
+    {
         int Null;
         float NullRegenRate;
         float NullRegenDelay;
     };
 
-    struct CharacterResistances
+    struct CharacterMagicResistance
     {
         float MagicResistance;
+    };
+
+    struct CharacterNullResistance
+    {
         float NullResistance;
     };
 
@@ -128,12 +186,12 @@ struct CharactersComponents
     {
         world.module<CharactersComponents>();
 
-        world.component<CharacterAttributes>();
-        world.component<CharacterStats>();
-        world.component<CharacterResistenances>();
+        //world.component<CharacterAttributes>();
+        //world.component<CharacterStats>();
+        //world.component<CharacterResistenances>();
         world.component<CharacterStatNumbers>();
         world.component<PassiveTreeModifier>();
-        world.component<CharacterGeneralBackground>();
+        //world.component<CharacterGeneralBackground>();
         world.component<CharacterMainBackground>();
     }
 };
