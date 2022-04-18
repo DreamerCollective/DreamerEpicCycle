@@ -1,5 +1,5 @@
 #pragma once
-#include "flecs.h"
+#include "flecs/flecs.h"
 #include "ItemComponents.h"
 #include "ItemConfigComponents.h"
 #include <iostream>
@@ -8,7 +8,7 @@ using namespace std;
 
 struct ItemConfig
 {
-	ItemConfig(flecs::world& world)
+	explicit ItemConfig(flecs::world& world)
 	{
 		world.module<ItemConfig>();
 
@@ -17,6 +17,7 @@ struct ItemConfig
 
 
 		world.system<ItemConfigComponents::ConfigStage>("StartConfig").iter(StartConfig);
+        //world.system<>("CreateNormalItemComponentsConfigMelee").iter(CreateNormalItemComponentsConfigMelee);
 	}
 
 	static void StartConfig(const flecs::iter& iter, ItemConfigComponents::ConfigStage* cs);

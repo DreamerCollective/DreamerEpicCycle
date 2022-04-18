@@ -24,7 +24,7 @@ void Item::SettingSeedForRandomItemEntitiesGeneration(const flecs::iter& iter, I
     {
         if (!iss->ItemSeedStage)
         {
-            int randomNumber = CreatingSeed();
+            int randomNumber = MathHelpers::CreatingSeed();
             //std::cout << "System SettingSeedForRandomItemEntitiesGeneration has generated this number " << randomNumber << " for " << it << std::endl;
             iss->Seed = randomNumber;
             iss->ItemSeedStage = true;
@@ -40,7 +40,7 @@ void Item::AddItemBaseComponenttoEntity(const flecs::iter& iter, ItemComponents:
     {
         if (!iss->ItemBaseComponentCreated)
         {
-            int GeneratingRandomBaseItemID = CreatingRandom32BitIntNumbers(iss->Seed, 1, 10);
+            int GeneratingRandomBaseItemID = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 1, 10);
             ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc)
             {
                 if (ibc.BaseTypeID == GeneratingRandomBaseItemID)
@@ -67,16 +67,9 @@ void Item::AddItemRarityComponenttoEntity(const flecs::iter &iter, ItemComponent
 
                 if(ibc.BaseTypeID == ib->BaseItemType)
                 {
-                    int RandomItemGeneratrionRarityNumber = CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
+                    int RandomItemGeneratrionRarityNumber = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
 
-                        if (ibc.BaseTypeID == ib->BaseItemType &&
-                            brt.rarityRollTable[i].RaritySpawnChanceMin <= RandomItemGeneratrionRarityNumber &&
-                            brt.rarityRollTable[i].RaritySpawnChanceMax >= RandomItemGeneratrionRarityNumber)
-                        {
-                            iter.entity(it).set<ItemComponents::ItemRarity>(
-                                    {brt.rarityRollTable[i].RarityLevel,
-                                     CreatingRandom32BitFloatNumbers(iss->Seed,brt.rarityRollTable[i].RarityAffixAllowance)});
-                        }
+
                 }
             });
             iss->ItemRarityComponentCreated = true;
@@ -86,25 +79,20 @@ void Item::AddItemRarityComponenttoEntity(const flecs::iter &iter, ItemComponent
 
 void Item::AddItemQualityComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemQualityComponentCreated && iss->ItemBaseComponentCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                 if(ibc.BaseTypeID == ib->BaseItemType)
                 {
-                    int RandomItemGeneratrionQualityNumber = CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
+                    int RandomItemGeneratrionQualityNumber = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
                     for (int i = 0; i < 21; i++)
                     {
-                        if (brt.qualityRollTable[i].QualitySpawnChanceMin <= RandomItemGeneratrionQualityNumber && brt.qualityRollTable[i].QualitySpawnChanceMax >= RandomItemGeneratrionQualityNumber)
-                        {
-                            iter.entity(it).set<ItemComponents::ItemQuality>({ brt.qualityRollTable[i].QualityNum,
-                                                                               brt.qualityRollTable[i].QualityIntStatIncrease,
-                                                                               brt.qualityRollTable[i].QualityFloatStatIncrease });
-                        }
+
                     }
                 }
             });
@@ -115,29 +103,19 @@ void Item::AddItemQualityComponenttoEntity(const flecs::iter &iter, ItemComponen
 
 void Item::AddItemMaterialComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemMaterialComponentCreated && iss->ItemBaseComponentCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                 if(ibc.BaseTypeID == ib->BaseItemType)
                 {
-                    int RandomItemGeneratrionMaterialNumber = CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
+                    int RandomItemGeneratrionMaterialNumber = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
                     for (int i = 0; i < 10; i++) {
-                        if (brt.materialRollTable[i].MaterialChanceMin <= RandomItemGeneratrionMaterialNumber &&
-                        brt.materialRollTable[i].MaterialChanceMax >= RandomItemGeneratrionMaterialNumber) {
-                            iter.entity(it).set<ItemComponents::ItemMaterial>({brt.materialRollTable[i].MaterialType,
-                                                                                CreatingRandom32BitIntNumbers(iss->Seed,
-                                                                                                              brt.materialRollTable[i].MaterialStatIntRollMin,
-                                                                                                              brt.materialRollTable[i].MaterialStatIntRollMax),
-                                                                                CreatingRandom32BitFloatNumbers(iss->Seed,
-                                                                                                                brt.materialRollTable[i].MaterialStatFloatRollMin,
-                                                                                                                brt.materialRollTable[i].MaterialStatFloatRollMax)
-                            });
-                        }
+
                     }
                 }
              });
@@ -148,30 +126,20 @@ void Item::AddItemMaterialComponenttoEntity(const flecs::iter &iter, ItemCompone
 
 void Item::AddItemManufacturerComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemManufacturerComponentCreated && iss->ItemBaseComponentCreated)
         {
 
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                  if(ibc.BaseTypeID == ib->BaseItemType)
                  {
-                     int RandomItemGeneratrionManufacturerNumber = CreatingRandom32BitIntNumbers(iss->Seed, 0, 11 + 1);
+                     int RandomItemGeneratrionManufacturerNumber = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 0, 11 + 1);
                      for (int i = 0; i < 5; i++) {
-                         if (brt.manufacturerRollTable[i].ManufacturerType == RandomItemGeneratrionManufacturerNumber) {
-                             iter.entity(it).set<ItemComponents::ItemManufacturer>(
-                                     {brt.manufacturerRollTable[i].ManufacturerType,
-                                      CreatingRandom32BitIntNumbers(iss->Seed,
-                                                                    brt.manufacturerRollTable[i].ManufacturerStatIntRollMin,
-                                                                    brt.manufacturerRollTable[i].ManufacturerStatIntRollMax),
-                                      CreatingRandom32BitFloatNumbers(iss->Seed,
-                                                                      brt.manufacturerRollTable[i].ManufacturerStatFloatRollMin,
-                                                                      brt.manufacturerRollTable[i].ManufacturerStatFloatRollMax)
-                                     });
-                         }
+
                      }
                  }
              });
@@ -182,13 +150,13 @@ void Item::AddItemManufacturerComponenttoEntity(const flecs::iter &iter, ItemCom
 
 void Item::AddItemAffixComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib, ItemComponents::ItemRarity* ir)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemAffixComponentsCreated && iss->ItemBaseComponentCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                 if(ibc.BaseTypeID == ib->BaseItemType)
                 {
@@ -241,13 +209,13 @@ void Item::AddItemAffixComponenttoEntity(const flecs::iter &iter, ItemComponents
 
 void Item::AddItemPartsComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemPartsComponentsCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                 if(ibc.BaseTypeID == ib->BaseItemType)
                 {
@@ -261,24 +229,23 @@ void Item::AddItemPartsComponenttoEntity(const flecs::iter &iter, ItemComponents
 
 void Item::AddItemTagsComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemTagsCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
-                if (itc.ItemTagType == 1)
-                {
+                //if (itc.ItemTagType == 1)
+                //{
 //                    iter.entity(it).add<ItemComponents::EquipableItemTag>();
 //                    iter.entity(it).add<ItemComponents::WeaponsItemTag>();
 //                    iter.entity(it).add<ItemComponents::MeleeItemTag>();
 //                    iter.entity(it).add<ItemComponents::OneHandedItemTag>();
 //                    iter.entity(it).add<ItemComponents::SwordItemTag>();
 
-                    iter.entity(it).add<ItemConfigComponents::>();
-                }
+                //}
             });
             iss->ItemTagsCreated = true;
         }
@@ -287,13 +254,13 @@ void Item::AddItemTagsComponenttoEntity(const flecs::iter &iter, ItemComponents:
 
 void Item::AddItemStatsComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemStatComponentsCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
             {
                 if (icc.ItemComponentType == 1)
                 {
@@ -342,13 +309,13 @@ void Item::AddItemStatsComponenttoEntity(const flecs::iter &iter, ItemComponents
 
 void Item::CompliedItemStatsOnEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemTagConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::StandardItemBaseRollTable>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
 
     for (auto it : iter)
     {
         if (!iss->ItemStatCompiled)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemTagConfig& itc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::StandardItemBaseRollTable& brt)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
              {
 
              });
@@ -357,30 +324,7 @@ void Item::CompliedItemStatsOnEntity(const flecs::iter &iter, ItemComponents::It
     }
 }
 
-inline int Item::CreatingSeed()
-{
-    std::random_device rand32;
-    std::mt19937 gen(rand32());
-    std::uniform_int_distribution<int> randomNumber32(0, INT32_MAX);
-    int randomNumber = randomNumber32(gen);
-    return randomNumber;
-}
 
-inline int Item::CreatingRandom32BitIntNumbers(int seed, int min, int max)
-{
-    std::mt19937 gen(seed);
-    std::uniform_int_distribution<int> randomNumber32(min, max);
-    int randomNumber = randomNumber32(gen);
-    return randomNumber;
-}
-
-inline float Item::CreatingRandom32BitFloatNumbers(int seed, float min, float max)
-{
-    std::mt19937 gen(seed);
-    std::uniform_real_distribution<float> randomNumber32(min, max);
-    float randomNumber = randomNumber32(gen);
-    return randomNumber;
-}
 
 inline int Item::CalculatingFinalItemStatRollInt(int itemRoll, int rarityRoll, int qualityRoll, int materialRoll, int manufacturerRoll, 
     int  itemPart1, int  itemPart2, int  itemPart3, int  itemPart4, int  itemPart5, int  itemPart6, int  itemPart7, int  itemPart8, int  itemPart9, int  itemPart10, 

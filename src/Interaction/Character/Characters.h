@@ -1,5 +1,5 @@
 #pragma once
-#include "flecs.h"
+#include "flecs/flecs.h"
 #include "CharacterComponents.h"
 
 struct Characters

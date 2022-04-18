@@ -1,10 +1,11 @@
 #pragma once
+#include <cstdint>
 
-#include "flecs.h"
+#include "flecs/flecs.h"
 
 struct ChunkComponents
 {
-    const uint8_t NumberOfVoxelsInAChunk = 32;
+    //const uint8_t NumberOfVoxelsInAChunk = 32;
 
     struct ChunkPosition
     {
@@ -20,16 +21,16 @@ struct ChunkComponents
 
     struct ChunkInfo
     {
-
+        uint8_t chunkState;
     };
 
     explicit ChunkComponents(flecs::world& world)
     {
         world.module<ChunkComponents>();
 
-        //world.system<ChunkComponents::ChunkPosition>();
-        //world.system<ChunkComponents::ChunkInfo>();
-        //world.system<ChunkComponents::ChunkState>();
+        world.component<ChunkPosition>();
+        world.component<ChunkInfo>();
+        world.component<ChunkState>();
     }
 
 };

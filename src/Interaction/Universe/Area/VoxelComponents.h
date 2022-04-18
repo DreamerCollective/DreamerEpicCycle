@@ -1,6 +1,8 @@
 #pragma once
 
-#include "flecs.h"
+#include <cstdint>
+
+#include "flecs/flecs.h"
 
 struct VoxelComponents
 {

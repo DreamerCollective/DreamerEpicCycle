@@ -1,16 +1,15 @@
 #pragma once
 
 #include <cstdint>
-
 #include <iostream>
 
-#include "flecs.h"
+#include "flecs/flecs.h"
 
 #include "GalaxyComponentConfig.h"
 
 struct GalaxyComponents 
 {
-	GalaxyComponents(flecs::world& world)
+	explicit GalaxyComponents(flecs::world& world)
 	{
 		world.module<GalaxyComponents>();
 

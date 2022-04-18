@@ -9,7 +9,6 @@ include_directories(DreamerEpicCycle/shaders)
 
 
 add_executable(DreamerEpicCycle
-        src/Graphics/main.cpp
         src/Graphics/first_app.cpp
         src/Graphics/first_app.hpp
         src/Graphics/keyboard_movement_controller.cpp
@@ -38,9 +37,12 @@ add_executable(DreamerEpicCycle
         src/Graphics/lve_window.hpp
         third_party/tinyobjloader/tiny_obj_loader.h
 
-
         third_party/flecs/flecs.c
         third_party/flecs/flecs.h
+
+        src/Interaction/Helpers/MathHelpers.h
+        src/Interaction/Helpers/MathHelpers.cpp
+
         src/Interaction/Character/Characters.cpp
         src/Interaction/Character/Characters.h
         src/Interaction/Character/CharacterComponents.h
@@ -56,9 +58,9 @@ add_executable(DreamerEpicCycle
         src/Interaction/Universe/World/BioneComponents.h
         src/Interaction/Universe/World/BioneCreation.h
         src/Interaction/Universe/World/BioneCreation.cpp
-        src/Interaction/Universe/World/ChunkComponents.h
-        src/Interaction/Universe/World/ChunkCreation.h
-        src/Interaction/Universe/World/ChunkCreation.cpp
+        src/Interaction/Universe/Area/ChunkComponents.h
+        src/Interaction/Universe/Area/ChunkCreation.h
+        src/Interaction/Universe/Area/ChunkCreation.cpp
 
         src/Interaction/Items/Item.cpp
         src/Interaction/Items/Item.h
@@ -69,6 +71,8 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemConfigComponents.h
 
 
+
+        src/Main/main.cpp
         )
 
 if (WIN32)

@@ -136,7 +136,6 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
         if (cs->stage == 1)
         {
 
-
             auto ConfigItemBronzeFalx = iter.world().entity(); //"One Handed Short Sword Bronze Falx"
             ConfigItemBronzeFalx.set<ItemConfigComponents::ItemBaseConfig>({1});
 
@@ -324,7 +323,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
 
             iter.world().entity("Item").set<ItemComponents::ItemSpawning>({ 1000 });
 
-            char *stringJSON = ecs_entity_to_json(iter.world(), ConfigItemHoledAkrafena);
+            //const char *stringJSON = ecs_parse_json(iter.world(), ConfigItemHoledAkrafena);
 
             cs->stage++;
         }

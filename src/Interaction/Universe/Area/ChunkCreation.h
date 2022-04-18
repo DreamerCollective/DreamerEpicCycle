@@ -1,16 +1,16 @@
 #pragma once
 
-#include "flecs.h"
+#include "flecs/flecs.h"
 #include "ChunkComponents.h"
-#include "../Area/RegionComponents.h"
+#include "RegionComponents.h"
 
 struct ChunkCreation
 {
 public:
 
-    static void ChunkComponentCreationSystem(const flecs::iter& iter, ChunkComponents::ChunkState* cs);
+    //static void ChunkComponentCreationSystem(const flecs::iter& iter, ChunkComponents::ChunkState* cs);
 
-    ChunkCreation(flecs::world& world)
+    explicit ChunkCreation(flecs::world& world)
     {
         world.module<ChunkCreation>();
         world.import<ChunkComponents>();
