@@ -37,27 +37,27 @@ static constexpr ItemConfigComponents::ItemManufacturerConfig ItemManufacturerCo
 static constexpr ItemConfigComponents::ItemManufacturerConfig ItemManufacturerConfig10{ 10 }; //
 
 
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig0{ 0, 5000, 0};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig1{ 5000, 7000, 1};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig2{ 7000, 7500, 2};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig3{ 7500, 9000, 3};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig4{ 9000, 9200, 4};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig5{ 9200, 9300, 5};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig6{ 9300, 9350, 6};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig7{ 9350, 9400, 7};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig8{ 9400, 9450, 8};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig9{ 9450, 9500, 9};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig10{ 9500, 9550, 10};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig11{ 9550, 9600, 11};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig12{ 9600, 9650, 12};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig13{ 9650, 9700, 13};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig14{ 9700, 9750, 14};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig15{ 9750, 9800, 15};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig16{ 9800, 9850, 16};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig17{ 9850, 9900, 17};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig18{ 9900, 9950, 18};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig19{ 9950, 9955, 19};
-static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig20{ 9955, 10000, 20};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig0{ 0,0, 5000};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig1{ 1, 5000, 7000 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig2{ 2, 7000, 7500 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig3{ 3, 7500, 9000 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig4{ 4, 9000, 9200 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig5{ 5, 9200, 9300 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig6{ 6, 9300, 9350 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig7{ 7, 9350, 9400 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig8{ 8, 9400, 9450 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig9{ 9, 9450, 9500 };
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig10{ 10, 9500, 9550};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig11{ 11, 9550, 9600};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig12{ 12, 9600, 9650};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig13{ 13, 9650, 9700};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig14{ 14, 9700, 9750};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig15{ 15, 9750, 9800};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig16{ 16, 9800, 9850};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig17{ 17, 9850, 9900};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig18{ 18, 9900, 9950};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig19{ 19, 9950, 9955};
+static constexpr ItemConfigComponents::ItemQualityConfig ItemQualityConfig20{ 20, 9955, 10000};
 
 //One Handed Short Sword Bronze Falx Parts 
 
@@ -137,10 +137,9 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
         {
 
             auto ConfigItemBronzeFalx = iter.world().entity(); //"One Handed Short Sword Bronze Falx"
-            ConfigItemBronzeFalx.set<ItemConfigComponents::ItemBaseConfig>({1});
-
             auto ConfigItemBronzeFalxBase = iter.world().entity().child_of(ConfigItemBronzeFalx);
 
+            ConfigItemBronzeFalx.set<ItemConfigComponents::ItemBaseConfig>({1});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({15,20});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({23,30});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({3,6});
@@ -152,12 +151,8 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemBronzeFalx.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemBronzeFalx.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemBronzeFalx.set<ItemConfigComponents::ItemComponentsConfig>({1});
-
-            auto ConfigUtemBronzeFalxNormal = iter.world().entity().child_of(ConfigItemBronzeFalx);
-
-            CreateNormalItemComponentsConfigMelee(iter, ConfigUtemBronzeFalxNormal);
 
             auto ConfigItemIllyrSica = iter.world().entity();
             auto ConfigItemIllyrSicaBase = iter.world().entity().child_of(ConfigItemIllyrSica);
@@ -174,7 +169,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemIllyrSicaBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemIllyrSicaBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemIllyrSica.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemIllyrSica.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemIllyrSica.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemGrandDao = iter.world().entity();
@@ -192,7 +187,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemGrandDaoBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemGrandDaoBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemGrandDao.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemGrandDao.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemGrandDao.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemWateredXiphos = iter.world().entity();
@@ -210,7 +205,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemWateredXiphosBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemWateredXiphosBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemWateredXiphos.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemWateredXiphos.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemWateredXiphos.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemDryKhopesh = iter.world().entity();
@@ -228,11 +223,11 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemDryKhopeshBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemDryKhopeshBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemDryKhopesh.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemDryKhopesh.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemDryKhopesh.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemCuttingSabre = iter.world().entity();
-            auto ConfigItemCuttingSabreBase = iter.world().entity().child_of(ConfigItemBronzeFalx);
+            auto ConfigItemCuttingSabreBase = iter.world().entity().child_of(ConfigItemCuttingSabre);
 
             ConfigItemCuttingSabre.set<ItemConfigComponents::ItemBaseConfig>({ 6 }); //"One Handed Short Sword Sabre"
             ConfigItemCuttingSabreBase.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({15,20});
@@ -246,7 +241,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemCuttingSabreBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemCuttingSabreBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemCuttingSabre.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemCuttingSabre.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemCuttingSabre.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemBloodyMacuahui = iter.world().entity();
@@ -264,7 +259,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemBloodyMacuahuiBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemBloodyMacuahuiBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemBloodyMacuahui.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemBloodyMacuahui.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemBloodyMacuahui.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemShiningCrusader = iter.world().entity();
@@ -282,7 +277,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemShiningCrusaderBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemShiningCrusaderBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemShiningCrusader.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemShiningCrusader.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemShiningCrusader.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemSerratedKhanda = iter.world().entity();
@@ -300,7 +295,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemSerratedKhandaBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemSerratedKhandaBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemSerratedKhanda.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemSerratedKhanda.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemSerratedKhanda.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
             auto ConfigItemHoledAkrafena = iter.world().entity();
@@ -318,10 +313,649 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigItemHoledAkrafenaBase.set<ItemConfigComponents::ItemStatConfigAttackRate>({10,13});
             ConfigItemHoledAkrafenaBase.set<ItemConfigComponents::ItemStatConfigWeight>({1500});
 
-            ConfigItemHoledAkrafena.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it), iter.world().entity(it)});
+            ConfigItemHoledAkrafena.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
             ConfigItemHoledAkrafena.set<ItemConfigComponents::ItemComponentsConfig>({1});
 
-            iter.world().entity("Item").set<ItemComponents::ItemSpawning>({ 1000 });
+            auto ConfigRarity = iter.world().entity();
+
+            ConfigRarity.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
+
+            auto ConfigRarityMelee1 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity1);
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigRange>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({1, 1});
+            ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({1, 1});
+
+            auto ConfigRarityMelee2 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity2);
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee3 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity3);
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee4 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity4);
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee5 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity5);
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee6 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity6);
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee7 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity7);
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee8 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity8);
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee9 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity9);
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee10 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity10);
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigRarityMelee11 = iter.world().entity().child_of(ConfigRarity);
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity11);
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQuality = iter.world().entity();
+
+            ConfigQuality.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
+
+            auto ConfigQualityMelee1 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig1);
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee2 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig2);
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee3 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig3);
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee4 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig4);
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee5 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig5);
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee6 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig6);
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee7 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig7);
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee8 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig8);
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee9 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig9);
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee10 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig10);
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee11 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig11);
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee12 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig12);
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee13 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig13);
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee14 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig14);
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee15 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig15);
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee16 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig16);
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee17 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig17);
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee18 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig18);
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee19 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig19);
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigQualityMelee20 = iter.world().entity().child_of(ConfigQuality);
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig20);
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterial = iter.world().entity();
+
+
+
+            auto ConfigMaterialMelee1 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig1);
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee2 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig2);
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee3 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig3);
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee4 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig4);
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee5 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig5);
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee6 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig6);
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee7 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig7);
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee8 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig8);
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee9 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig9);
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigMaterialMelee10 = iter.world().entity().child_of(ConfigMaterial);
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig10);
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturer = iter.world().entity();
+
+            ConfigManufacturer.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
+
+
+            auto ConfigManufacturerMelee1 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig1);
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee2 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig2);
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee3 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig3);
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee4 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig4);
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee5 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig5);
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee6 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig6);
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee7 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig7);
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee8 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig8);
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee9 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig9);
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            auto ConfigManufacturerMelee10 = iter.world().entity().child_of(ConfigManufacturer);
+
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig10);
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
+            ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
+
+            //iter.world().entity("Item").set<ItemComponents::ItemSpawning>({ 1000 });
 
             //const char *stringJSON = ecs_parse_json(iter.world(), ConfigItemHoledAkrafena);
 
@@ -330,637 +964,15 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
     }
 }
 
-void ItemConfig::CreateNormalItemComponentsConfigMelee(const flecs::iter &iter, flecs::entity entity)
+void ItemConfig::CreateNormalItemComponentsConfigMelee(const flecs::iter &iter, ItemConfigComponents::ConfigStage* cs)
 {
-    auto ConfigRarity = iter.world().entity().child_of(entity);
+    for (auto it : iter)
+    {
+        if (cs->stage == 2)
+        {
 
-    auto ConfigRarityMelee1 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity1);
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee2 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity2);
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee3 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity3);
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee4 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity4);
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee5 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity5);
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee6 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity6);
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee7 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity7);
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee8 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity8);
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee9 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity9);
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee10 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity10);
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigRarityMelee11 = iter.world().entity().child_of(ConfigRarity);
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemRarityConfig>(ItemRarity11);
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigRarityMelee11.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQuality = iter.world().entity().child_of(entity);
-
-    auto ConfigQualityMelee1 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig1);
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee2 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig2);
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee3 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig3);
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee4 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig4);
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee5 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig5);
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee6 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig6);
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee7 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig7);
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee8 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig8);
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee9 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig9);
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee10 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig10);
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee11 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig11);
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee11.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee12 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig12);
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee12.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee13 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig13);
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee13.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee14 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig14);
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee14.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee15 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig15);
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee15.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee16 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig16);
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee16.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee17 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig17);
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee17.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee18 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig18);
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee18.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee19 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig19);
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee19.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigQualityMelee20 = iter.world().entity().child_of(ConfigQuality);
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemQualityConfig>(ItemQualityConfig20);
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigQualityMelee20.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterial = iter.world().entity().child_of(entity);
-
-    auto ConfigMaterialMelee1 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig1);
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee2 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig2);
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee3 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig3);
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee4 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig4);
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee5 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig5);
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee6 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig6);
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee7 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig7);
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee8 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig8);
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee9 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig9);
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigMaterialMelee10 = iter.world().entity().child_of(ConfigMaterial);
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig10);
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigMaterialMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-    
-    auto ConfigManufacturer = iter.world().entity().child_of(entity);
-
-    auto ConfigManufacturerMelee1 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig1);
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee1.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee2 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig2);
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee2.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee3 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig3);
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee3.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee4 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig4);
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee4.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee5 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig5);
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee5.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee6 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig6);
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee6.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee7 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig7);
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee7.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee8 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig8);
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee8.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee9 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig9);
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee9.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
-
-    auto ConfigManufacturerMelee10 = iter.world().entity().child_of(ConfigManufacturer);
-
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig10);
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigBlockChance>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigGuard>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigRange>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigAttackRate>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0,0});
-    ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0,0});
+        }
+    }
 }
 
 void ItemConfig::CreateNormalItemComponentsConfigRange(const flecs::iter &iter, flecs::entity entity)

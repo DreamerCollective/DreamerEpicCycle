@@ -1,8 +1,7 @@
 #include "flecs/flecs.h"
 #include "../Interaction/Items/Item.h"
+#include "../Interaction/Items/ItemConfig.h"
 #include "../Graphics/first_app.hpp"
-//#include <flecs_dash.h>
-//#include <flecs_systems_civetweb.h>
 #include <iostream>
 
 using namespace std;
@@ -19,10 +18,10 @@ int main()
 
     //cin >> AmountofItemstoSpawn;
 
-    //if (AmountofItemstoSpawn == 0)
-    //{
-        //AmountofItemstoSpawn = 100;
-    //}
+    if (AmountofItemstoSpawn == 0)
+    {
+        AmountofItemstoSpawn = 100;
+    }
 
     world.import<ItemConfig>();
 
@@ -32,7 +31,9 @@ int main()
 
     world.set_target_fps(60);
 
-    world.app().enable_rest().run();
+    //world.set_threads(12);
+
+    world.app().enable_rest(true).run();
 
     while(world.progress());
 
@@ -40,9 +41,12 @@ int main()
     {
         lve::FirstApp app{};
 
-        try {
+        try
+        {
             app.run();
-        } catch (const std::exception &e) {
+        }
+        catch (const std::exception &e)
+        {
             std::cerr << e.what() << '\n';
             return EXIT_FAILURE;
         }

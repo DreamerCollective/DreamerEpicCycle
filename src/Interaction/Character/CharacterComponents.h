@@ -3,39 +3,20 @@
 
 struct CharactersComponents
 {
-    enum PersonalityTypeInOutFocused
-    {
-        Intraversion = 0,
-        Extraversion = 1
-    };
-    enum PersonalityTypeInformationGathering
-    {
-        Sensing = 0,
-        Intuition = 1
-    };
-    enum PersonalityTypeMakeDecisions
-    {
-        Thinking = 0,
-        Feeling = 1
-    };
-    enum PersonalityTypeOuterLife
-    {
-        Judging = 0,
-        Perceiving = 1
-    };
 
     struct CharacterMood
     {
         int mindset;
     };
 
-    struct PlayerCharacterCreateBackground
+    struct PlayerCharacterCreatedBackground
     {
         int name;
         int gender;
         int sexuality;
         int ethnicity;
         int description;
+
     };
 
     struct CharacterLevel
@@ -48,13 +29,9 @@ struct CharactersComponents
     struct CharacterMainBackground
     {
         int race;
-        int age;
         int heritage;
+        int age;
         int background;
-        PersonalityTypeInOutFocused IorE;
-        PersonalityTypeInformationGathering SorN;
-        PersonalityTypeMakeDecisions TorF;
-        PersonalityTypeOuterLife JorP;
     };
 
     struct CharacterStrengthAttribute
@@ -96,10 +73,12 @@ struct CharactersComponents
     {
         int Wisdom;
     };
+
     struct CharacterMagicAttribute
     {
         int Magic;
     };
+
     struct CharacterNullAttribute
     {
         int Null;
@@ -182,16 +161,46 @@ struct CharactersComponents
         int floatmodifier;
     };
 
+    struct PassiveTreeSkillPoints
+    {
+        int Skillpoints;
+        int SkillpointsToSpend;
+        int SKillpointsAlreadySpend;
+    };
+
     explicit CharactersComponents(flecs::world& world)
     {
         world.module<CharactersComponents>();
 
-        //world.component<CharacterAttributes>();
-        //world.component<CharacterStats>();
-        //world.component<CharacterResistenances>();
+        world.component<CharacterStrengthAttribute>();
+        world.component<CharacterDexterityAttribute>();
+        world.component<CharacterIntelligenceAttribute>();
+        world.component<CharacterWillpowerAttribute>();
+        world.component<CharacterEnduranceAttribute>();
+        world.component<CharacterLuckAttribute>();
+        world.component<CharacterCharismaAttribute>();
+        world.component<CharacterWisdomAttribute>();
+        world.component<CharacterMagicAttribute>();
+        world.component<CharacterNullAttribute>();
+
+        world.component<CharacterLifeStats>();
+        world.component<CharacterEnergyStats>();
+        world.component<CharacterArmourStats>();
+        world.component<CharacterShieldStats>();
+        world.component<CharacterMagicStats>();
+        world.component<CharacterNullStats>();
+
+        world.component<CharacterMagicResistance>();
+        world.component<CharacterNullResistance>();
+
+
         world.component<CharacterStatNumbers>();
         world.component<PassiveTreeModifier>();
-        //world.component<CharacterGeneralBackground>();
+        world.component<PassiveTreeSkillPoints>();
+        world.component<PassiveTreeNode>();
+
+
         world.component<CharacterMainBackground>();
+        world.component<PlayerCharacterCreatedBackground>();
     }
 };

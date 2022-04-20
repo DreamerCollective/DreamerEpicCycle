@@ -234,6 +234,15 @@ struct ItemConfigComponents
         flecs::entity RapierItemTag;
     };
 
+    struct ItemWeaponMeleeOneHandedClubTags
+    {
+        flecs::entity EquipableItemTag;
+        flecs::entity WeaponsItemTag;
+        flecs::entity MeleeItemTag;
+        flecs::entity OneHandedItemTag;
+        flecs::entity ClubItemTag;
+    };
+
     struct ConfigStage 
     {
         uint8_t stage;
@@ -272,6 +281,14 @@ struct ItemConfigComponents
         world.component<ItemStatConfigMovement>();
         world.component<ItemComponentsConfig>();
         world.component<ConfigStage>();
+        world.component<ItemWeaponMeleeOneHandedSwordTags>();
+        world.component<ItemWeaponMeleeOneHandedMaceTags>();
+        world.component<ItemWeaponMeleeOneHandedKnifeTags>();
+        world.component<ItemWeaponMeleeOneHandedWarhammerTags>();
+        world.component<ItemWeaponMeleeOneHandedAxeTags>();
+        world.component<ItemWeaponMeleeOneHandedShieldTags>();
+        world.component<ItemWeaponMeleeOneHandedRapierTags>();
+        world.component<ItemWeaponMeleeOneHandedClubTags>();
     }
 };
 

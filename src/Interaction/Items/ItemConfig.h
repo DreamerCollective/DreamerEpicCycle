@@ -17,12 +17,12 @@ struct ItemConfig
 
 
 		world.system<ItemConfigComponents::ConfigStage>("StartConfig").iter(StartConfig);
-        //world.system<>("CreateNormalItemComponentsConfigMelee").iter(CreateNormalItemComponentsConfigMelee);
+        world.system<ItemConfigComponents::ConfigStage>("CreateNormalItemComponentsConfigMelee").iter(CreateNormalItemComponentsConfigMelee);
 	}
 
 	static void StartConfig(const flecs::iter& iter, ItemConfigComponents::ConfigStage* cs);
 
-    static void CreateNormalItemComponentsConfigMelee(const flecs::iter& iter, flecs::entity entity);
+    static void CreateNormalItemComponentsConfigMelee(const flecs::iter& iter, ItemConfigComponents::ConfigStage* cs);
 
     static void CreateNormalItemComponentsConfigRange(const flecs::iter& iter, flecs::entity entity);
 

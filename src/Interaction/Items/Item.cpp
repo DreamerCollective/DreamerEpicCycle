@@ -13,8 +13,7 @@ void Item::CreateItemEntity(const flecs::iter& iter, ItemComponents::ItemSpawnin
         //e.destruct();
         iter.entity(it).remove<ItemComponents::ItemSpawning>();
         //iter.entity(it).destruct();
-        
-        //std::cout << "System CreateItemEntity is creating items" << std::endl;
+
     }
 }
 
@@ -48,7 +47,6 @@ void Item::AddItemBaseComponenttoEntity(const flecs::iter& iter, ItemComponents:
                     iter.entity(it).set<ItemComponents::ItemBase>({ GeneratingRandomBaseItemID});
                 }
             });
-            std::cout << "System AddItemBaseComponenttoEntity is creating Items " << std::endl;
             iss->ItemSeedStage = true;
         }
     }
@@ -70,6 +68,7 @@ void Item::AddItemRarityComponenttoEntity(const flecs::iter &iter, ItemComponent
                     int RandomItemGeneratrionRarityNumber = MathHelpers::CreatingRandom32BitIntNumbers(iss->Seed, 0, 10000 + 1);
 
 
+                    //ItemConfigComponents::ItemRarityConfig
                 }
             });
             iss->ItemRarityComponentCreated = true;
@@ -229,23 +228,22 @@ void Item::AddItemPartsComponenttoEntity(const flecs::iter &iter, ItemComponents
 
 void Item::AddItemTagsComponenttoEntity(const flecs::iter &iter, ItemComponents::ItemStaging *iss, ItemComponents::ItemBase *ib)
 {
-    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig>();
+    auto ItemConfigQuery = iter.world().filter<ItemConfigComponents::ItemBaseConfig, ItemConfigComponents::ItemComponentsConfig, ItemConfigComponents::ItemWeaponMeleeOneHandedAxeTags>();
 
     for (auto it : iter)
     {
         if (!iss->ItemTagsCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc, ItemConfigComponents::ItemWeaponMeleeOneHandedAxeTags& icat)
             {
-                //if (itc.ItemTagType == 1)
-                //{
-//                    iter.entity(it).add<ItemComponents::EquipableItemTag>();
-//                    iter.entity(it).add<ItemComponents::WeaponsItemTag>();
-//                    iter.entity(it).add<ItemComponents::MeleeItemTag>();
-//                    iter.entity(it).add<ItemComponents::OneHandedItemTag>();
-//                    iter.entity(it).add<ItemComponents::SwordItemTag>();
-
-                //}
+                if(icc.ItemComponentType == 1)
+                {
+                    iter.world().entity(icat.AxeItemTag);
+                    iter.world().entity(icat.EquipableItemTag);
+                    iter.world().entity(icat.MeleeItemTag);
+                    iter.world().entity(icat.OneHandedItemTag);
+                    iter.world().entity(icat.WeaponsItemTag);
+                }
             });
             iss->ItemTagsCreated = true;
         }
