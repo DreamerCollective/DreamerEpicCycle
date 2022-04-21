@@ -1,3 +1,20 @@
+/* Copyright (c) 2021, Dreamer Collective
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 the "License";
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 #include "ItemConfig.h"
 #include <iostream>
 
@@ -698,7 +715,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
 
             auto ConfigMaterial = iter.world().entity();
 
-
+            ConfigMaterial.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
 
             auto ConfigMaterialMelee1 = iter.world().entity().child_of(ConfigMaterial);
             ConfigMaterialMelee1.set<ItemConfigComponents::ItemManufacturerConfig>(ItemManufacturerConfig1);
@@ -823,7 +840,6 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             auto ConfigManufacturer = iter.world().entity();
 
             ConfigManufacturer.set<ItemConfigComponents::ItemWeaponMeleeOneHandedSwordTags>({iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity(), iter.world().entity()});
-
 
             auto ConfigManufacturerMelee1 = iter.world().entity().child_of(ConfigManufacturer);
 
@@ -955,7 +971,7 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigHandling>({0, 0});
             ConfigManufacturerMelee10.set<ItemConfigComponents::ItemStatConfigAccuracy>({0, 0});
 
-            //iter.world().entity("Item").set<ItemComponents::ItemSpawning>({ 1000 });
+            iter.world().entity("Item").set<ItemComponents::ItemSpawning>({ 1000 });
 
             //const char *stringJSON = ecs_parse_json(iter.world(), ConfigItemHoledAkrafena);
 

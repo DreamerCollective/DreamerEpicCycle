@@ -1,3 +1,20 @@
+/* Copyright (c) 2021, Dreamer Collective
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 the "License";
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 #pragma once
 
 #include <cstdint>
@@ -21,29 +38,29 @@ public:
         world.import<ItemComponents>();
         world.module<Item>();
 
-        world.system<ItemComponents::ItemSpawning>("CreateItemEntity").iter(CreateItemEntity);
+        world.system<ItemComponents::ItemSpawning>("CreateItemEntity").multi_threaded(true).iter(CreateItemEntity);
 
-        world.system<ItemComponents::ItemStaging>("SettingSeedForRandomItemEntitiesGeneration").iter(SettingSeedForRandomItemEntitiesGeneration);
+        world.system<ItemComponents::ItemStaging>("SettingSeedForRandomItemEntitiesGeneration").multi_threaded(true).iter(SettingSeedForRandomItemEntitiesGeneration);
 
-        world.system<ItemComponents::ItemStaging>("AddItemBaseComponenttoEntity").iter(AddItemBaseComponenttoEntity);
+        world.system<ItemComponents::ItemStaging>("AddItemBaseComponenttoEntity").multi_threaded(true).iter(AddItemBaseComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemRarityComponenttoEntity").iter(AddItemRarityComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemRarityComponenttoEntity").multi_threaded(true).iter(AddItemRarityComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemQualityComponenttoEntity").iter(AddItemQualityComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemQualityComponenttoEntity").multi_threaded(true).iter(AddItemQualityComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemMaterialComponenttoEntity").iter(AddItemMaterialComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemMaterialComponenttoEntity").multi_threaded(true).iter(AddItemMaterialComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemManufacturerComponenttoEntity").iter(AddItemManufacturerComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemManufacturerComponenttoEntity").multi_threaded(true).iter(AddItemManufacturerComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase, ItemComponents::ItemRarity>("AddItemAffixComponenttoEntity").iter(AddItemAffixComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase, ItemComponents::ItemRarity>("AddItemAffixComponenttoEntity").multi_threaded(true).iter(AddItemAffixComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemPartsComponenttoEntity").iter(AddItemPartsComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemPartsComponenttoEntity").multi_threaded(true).iter(AddItemPartsComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemTagsComponenttoEntity").iter(AddItemTagsComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemTagsComponenttoEntity").multi_threaded(true).iter(AddItemTagsComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemStatsComponenttoEntity").iter(AddItemStatsComponenttoEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("AddItemStatsComponenttoEntity").multi_threaded(true).iter(AddItemStatsComponenttoEntity);
 
-        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("CompliedItemStatsOnEntity").iter(CompliedItemStatsOnEntity);
+        world.system<ItemComponents::ItemStaging, ItemComponents::ItemBase>("CompliedItemStatsOnEntity").multi_threaded(true).iter(CompliedItemStatsOnEntity);
 
         //world.system<ItemComponents::ItemBase, ItemComponents::ItemStaging, ItemComponents::ItemRarity>("CreatingRarityModComponentsToEntity").iter(CreatingRarityModComponentsToEntity);
 
