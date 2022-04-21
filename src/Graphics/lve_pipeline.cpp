@@ -8,6 +8,10 @@
 #include <iostream>
 #include <stdexcept>
 
+#ifndef ENGINE_DIR
+#define ENGINE_DIR "../"
+#endif
+
 namespace lve {
 
 LvePipeline::LvePipeline(
@@ -23,14 +27,14 @@ LvePipeline::~LvePipeline() {
   vkDestroyShaderModule(lveDevice.device(), vertShaderModule, nullptr);
   vkDestroyShaderModule(lveDevice.device(), fragShaderModule, nullptr);
   vkDestroyPipeline(lveDevice.device(), graphicsPipeline, nullptr);
-  //vkDestroyPipelineLayout(lveDevice.device(), graphicsPipeline, nullptr);
 }
 
 std::vector<char> LvePipeline::readFile(const std::string& filepath) {
-  std::ifstream file{filepath, std::ios::ate | std::ios::binary};
+  std::string enginePath = ENGINE_DIR + filepath;
+  std::ifstream file{enginePath, std::ios::ate | std::ios::binary};
 
   if (!file.is_open()) {
-    throw std::runtime_error("failed to open file: " + filepath);
+    throw std::runtime_error("failed to open file: " + enginePath);
   }
 
   size_t fileSize = static_cast<size_t>(file.tellg());
@@ -76,8 +80,8 @@ void LvePipeline::createGraphicsPipeline(
   shaderStages[1].pNext = nullptr;
   shaderStages[1].pSpecializationInfo = nullptr;
 
-  auto bindingDescriptions = LveModel::Vertex::getBindingDescriptions();
-  auto attributeDescriptions = LveModel::Vertex::getAttributeDescriptions();
+  auto& bindingDescriptions = configInfo.bindingDescriptions;
+  auto& attributeDescriptions = configInfo.attributeDescriptions;
   VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
   vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
   vertexInputInfo.vertexAttributeDescriptionCount =
@@ -201,6 +205,9 @@ void LvePipeline::defaultPipelineConfigInfo(PipelineConfigInfo& configInfo) {
   configInfo.dynamicStateInfo.dynamicStateCount =
       static_cast<uint32_t>(configInfo.dynamicStateEnables.size());
   configInfo.dynamicStateInfo.flags = 0;
+
+  configInfo.bindingDescriptions = LveModel::Vertex::getBindingDescriptions();
+  configInfo.attributeDescriptions = LveModel::Vertex::getAttributeDescriptions();
 }
 
 }  // namespace lve

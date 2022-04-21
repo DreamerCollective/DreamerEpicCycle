@@ -38,9 +38,9 @@ LveSwapChain::~LveSwapChain() {
   }
   swapChainImageViews.clear();
 
-  if (swapChain != 0) {
+  if (swapChain != nullptr) {
     vkDestroySwapchainKHR(device.device(), swapChain, nullptr);
-    swapChain = 0;
+    swapChain = nullptr;
   }
 
   for (int i = 0; i < depthImages.size(); i++) {

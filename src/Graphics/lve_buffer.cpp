@@ -61,10 +61,9 @@ LveBuffer::~LveBuffer() {
  *
  * @return VkResult of the buffer mapping call
  */
-VkResult LveBuffer::map(VkDeviceSize size, VkDeviceSize offset)
-{
-    assert(buffer && memory && "Called map on buffer before create");
-    return vkMapMemory(lveDevice.device(), memory, offset, size, 0, &mapped);
+VkResult LveBuffer::map(VkDeviceSize size, VkDeviceSize offset) {
+  assert(buffer && memory && "Called map on buffer before create");
+  return vkMapMemory(lveDevice.device(), memory, offset, size, 0, &mapped);
 }
 
 /**

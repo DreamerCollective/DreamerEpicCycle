@@ -15,6 +15,8 @@ add_executable(DreamerEpicCycle
         src/Graphics/keyboard_movement_controller.hpp
         src/Graphics/lve_buffer.cpp
         src/Graphics/lve_buffer.hpp
+        src/Graphics/lve_descriptors.cpp
+        src/Graphics/lve_descriptors.hpp
         src/Graphics/lve_camera.cpp
         src/Graphics/lve_camera.hpp
         src/Graphics/lve_device.cpp
@@ -31,8 +33,10 @@ add_executable(DreamerEpicCycle
         src/Graphics/lve_swap_chain.cpp
         src/Graphics/lve_swap_chain.hpp
         src/Graphics/lve_utils.hpp
-        src/Graphics/simple_render_system.cpp
-        src/Graphics/simple_render_system.hpp
+        src/Graphics/systems/simple_render_system.cpp
+        src/Graphics/systems/simple_render_system.hpp
+        src/Graphics/systems/point_light_system.cpp
+        src/Graphics/systems/point_light_system.hpp
         src/Graphics/lve_window.cpp
         src/Graphics/lve_window.hpp
         third_party/tinyobjloader/tiny_obj_loader.h

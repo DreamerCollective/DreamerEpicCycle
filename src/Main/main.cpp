@@ -8,26 +8,19 @@ using namespace std;
 
 int main() 
 {
-    bool ActiviateVulkan = false;
+    bool ActiviateVulkan = true;
 
     flecs::world world;
-
-    int AmountofItemstoSpawn = 1000;
 
     //cout << "Type the amount of items to spawn" << std::endl;
 
     //cin >> AmountofItemstoSpawn;
 
-    if (AmountofItemstoSpawn == 0)
-    {
-        AmountofItemstoSpawn = 100;
-    }
+    //world.import<ItemConfig>();
 
-    world.import<ItemConfig>();
+    //world.import<Item>();
 
-    world.import<Item>();
-
-    world.entity("Item").set<ItemConfigComponents::ConfigStage>({ 1 });
+    //world.entity("Item").set<ItemConfigComponents::ConfigStage>({ 1 });
 
     world.set_target_fps(60);
 
