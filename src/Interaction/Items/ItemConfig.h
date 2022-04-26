@@ -33,8 +33,8 @@ struct ItemConfig
 		world.import<ItemConfigComponents>();
 
 
-		world.system<ItemConfigComponents::ConfigStage>("StartConfig").multi_threaded(true).iter(StartConfig);
-        world.system<ItemConfigComponents::ConfigStage>("CreateNormalItemComponentsConfigMelee").multi_threaded(true).iter(CreateNormalItemComponentsConfigMelee);
+		world.system<ItemConfigComponents::ConfigStage>("StartConfig").multi_threaded().iter(StartConfig);
+        world.system<ItemConfigComponents::ConfigStage>("CreateNormalItemComponentsConfigMelee").multi_threaded().iter(CreateNormalItemComponentsConfigMelee);
 	}
 
 	static void StartConfig(const flecs::iter& iter, ItemConfigComponents::ConfigStage* cs);
