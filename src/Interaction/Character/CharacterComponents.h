@@ -33,14 +33,13 @@ struct CharactersComponents
         int sexuality;
         int ethnicity;
         int description;
-
     };
 
-    struct CharacterLevel
+    struct CharacterPoints
     {
-        uint16_t characterLevel;
-        uint32_t characterExperience;
-        uint32_t experienceNeededLevelUp;
+        uint32_t characterExperiencePoints;
+        uint32_t characterExperiencePointsToSpend;
+        uint32_t characterExperiencePointsAlreadySpent;
     };
 
     struct CharacterMainBackground
@@ -170,6 +169,7 @@ struct CharactersComponents
     struct PassiveTreeNode
     {
         uint32_t id;
+        uint32_t level;
     };
 
     struct PassiveTreeModifier
@@ -178,11 +178,11 @@ struct CharactersComponents
         int floatmodifier;
     };
 
-    struct PassiveTreeSkillPoints
+    struct PassiveTreeSkillPointsCost
     {
-        int Skillpoints;
-        int SkillpointsToSpend;
-        int SKillpointsAlreadySpend;
+        uint32_t CharacterPointsCost;
+        uint32_t pointsPerLevel;
+        uint32_t pointIncreasePerLevel;
     };
 
     explicit CharactersComponents(flecs::world& world)
@@ -199,6 +199,7 @@ struct CharactersComponents
         world.component<CharacterWisdomAttribute>();
         world.component<CharacterMagicAttribute>();
         world.component<CharacterNullAttribute>();
+        world.component<CharacterStatNumbers>();
 
         world.component<CharacterLifeStats>();
         world.component<CharacterEnergyStats>();
@@ -210,18 +211,13 @@ struct CharactersComponents
         world.component<CharacterMagicResistance>();
         world.component<CharacterNullResistance>();
 
-
-        world.component<CharacterStatNumbers>();
         world.component<PassiveTreeModifier>();
-        world.component<PassiveTreeSkillPoints>();
+        world.component<PassiveTreeSkillPointsCost>();
         world.component<PassiveTreeNode>();
-
 
         world.component<CharacterMainBackground>();
         world.component<PlayerCharacterCreatedBackground>();
-        world.component<CharacterLevel>();
-
-        world.component<CharacterStatNumbers>();
+        world.component<CharacterPoints>();
 
     }
 };
