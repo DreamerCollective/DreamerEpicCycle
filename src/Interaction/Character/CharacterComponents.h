@@ -20,12 +20,6 @@
 
 struct CharactersComponents
 {
-
-    struct CharacterMood
-    {
-        int mindset;
-    };
-
     struct PlayerCharacterCreatedBackground
     {
         int name;
@@ -33,21 +27,21 @@ struct CharactersComponents
         int sexuality;
         int ethnicity;
         int description;
+        int background;
     };
 
     struct CharacterPoints
     {
+        uint32_t characterPoints;
+        uint32_t characterPointsToSpend;
+        uint32_t characterPointsAlreadySpent;
         uint32_t characterExperiencePoints;
-        uint32_t characterExperiencePointsToSpend;
-        uint32_t characterExperiencePointsAlreadySpent;
     };
 
     struct CharacterMainBackground
     {
         int race;
-        int heritage;
         int age;
-        int background;
     };
 
     struct CharacterStrengthAttribute

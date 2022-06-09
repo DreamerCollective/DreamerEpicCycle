@@ -41,6 +41,8 @@ int main()
 
     world.set_target_fps(60);
 
+    world.import<flecs::monitor>();
+
     //world.set_threads(12);
 
     world.app().enable_rest(true).run();
