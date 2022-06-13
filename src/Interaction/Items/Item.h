@@ -33,7 +33,7 @@ struct Item
 {
 public:
 
-    Item(flecs::world& world) 
+    explicit Item(flecs::world& world)
     {
         world.import<ItemComponents>();
         world.module<Item>();
