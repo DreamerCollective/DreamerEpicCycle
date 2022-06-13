@@ -22,7 +22,7 @@
 
 struct ItemComponents
 {
-    struct ItemStaging
+    struct EquipableItemStaging
     {
         bool ItemSeedStage;
         bool ItemBaseComponentCreated;
@@ -35,6 +35,17 @@ struct ItemComponents
         bool ItemTagsCreated;
         bool ItemStatComponentsCreated;
         bool ItemStatCompiled;
+        int Seed;
+    };
+
+    struct CraftableItemStaging
+    {
+        bool ItemSeedStage;
+        bool ItemBaseComponentCreated;
+        bool ItemRarityComponentCreated;
+        bool ItemAffixComponentsCreated;
+        bool ItemPartsComponentsCreated;
+        bool ItemTagsCreated;
         int Seed;
     };
 
@@ -447,7 +458,7 @@ struct ItemComponents
     {
         world.module<ItemComponents>();
 
-        world.component<ItemStaging>();
+        world.component<EquipableItemStaging>();
         world.component<ItemSpawning>();
         world.component<ItemBase>();
         world.component<ItemRarity>();

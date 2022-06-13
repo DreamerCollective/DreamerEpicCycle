@@ -16,7 +16,7 @@
  */
 
 #include "MathHelpers.h"
- int MathHelpers::CreatingSeed()
+int MathHelpers::CreatingSeed()
 {
     std::random_device rand32;
     std::mt19937 gen(rand32());

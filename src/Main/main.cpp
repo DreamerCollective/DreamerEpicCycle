@@ -16,8 +16,19 @@
  */
 
 #include "flecs/flecs.h"
-#include "../Interaction/Items/Item.h"
 #include "../Interaction/Items/ItemConfig.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationAffixes.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationBase.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationManufacturer.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationMaterial.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationParts.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationQuality.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationRarity.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationSeed.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationStats.h"
+#include "../Interaction/Items/ItemGeneration/ItemGenerationTags.h"
+#include "../Interaction/Items/ItemGeneration/ItemGeneration.h"
 #include "../Graphics/first_app.hpp"
 #include <iostream>
 
@@ -35,7 +46,18 @@ int main()
 
     world.import<ItemConfig>();
 
-    world.import<Item>();
+    world.import<ItemGeneration>();
+    world.import<ItemGenerationAffixes>();
+    world.import<ItemGenerationBase>();
+    world.import<ItemGenerationManufacturer>();
+    world.import<ItemGenerationMaterial>();
+    world.import<ItemGenerationParts>();
+    world.import<ItemGenerationQuality>();
+    world.import<ItemGenerationRarity>();
+    world.import<ItemGenerationSeed>();
+    world.import<ItemGenerationStatCompile>();
+    world.import<ItemGenerationStats>();
+    world.import<ItemGenerationTags>();
 
     world.entity("Item").set<ItemConfigComponents::ConfigStage>({ 1 });
 

@@ -1,12 +1,12 @@
+#pragma once
+
 #include <cstdint>
 #include <cstdlib>
 #include "flecs/flecs.h"
-#include "ItemConfig.h"
-#include "ItemComponents.h"
-#include "../Helpers/MathHelpers.h"
-
+#include "../ItemConfig.h"
+#include "../ItemComponents.h"
+#include "../../Helpers/MathHelpers.h"
 using namespace std;
-
 
 struct ItemGeneration {
 public:
@@ -20,4 +20,4 @@ public:
     }
 
     static void CreateItemEntity(const flecs::iter &iter, ItemComponents::ItemSpawning *is);
-}
+};

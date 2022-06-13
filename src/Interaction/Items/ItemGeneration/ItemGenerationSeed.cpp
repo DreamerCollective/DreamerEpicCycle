@@ -1,6 +1,6 @@
 #include "ItemGenerationSeed.h"
 
-void ItemGenerationSeed::SettingSeedForRandomItemEntitiesGeneration(const flecs::iter& iter, ItemComponents::ItemStaging* iss)
+void ItemGenerationSeed::SettingSeedForRandomItemEntitiesGeneration(const flecs::iter& iter, ItemComponents::EquipableItemStaging* iss)
 {
     for (auto it : iter)
     {
