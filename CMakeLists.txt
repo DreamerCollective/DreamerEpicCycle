@@ -75,7 +75,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemConfigComponents.h
 
         src/Main/main.cpp
-        src/Graphics/DEC_descriptors_indexing.cpp src/Graphics/DEC_descriptors_indexing.h)
+        src/Graphics/DEC_descriptors_indexing.cpp src/Graphics/DEC_descriptors_indexing.h src/Interaction/Items/ItemGeneration.cpp src/Interaction/Items/ItemGeneration.h src/Interaction/Items/ItemGenerationSeed.cpp src/Interaction/Items/ItemGenerationSeed.h)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
