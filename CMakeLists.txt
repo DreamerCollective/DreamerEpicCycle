@@ -39,6 +39,8 @@ add_executable(DreamerEpicCycle
         src/Graphics/systems/point_light_system.hpp
         src/Graphics/lve_window.cpp
         src/Graphics/lve_window.hpp
+        src/Graphics/DEC_descriptors_indexing.cpp
+        src/Graphics/DEC_descriptors_indexing.h
         third_party/tinyobjloader/tiny_obj_loader.h
 
         third_party/flecs/flecs.c
@@ -71,9 +73,36 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemConfig.cpp
         src/Interaction/Items/ItemConfig.h
         src/Interaction/Items/ItemConfigComponents.h
+        src/Interaction/Items/ItemModule.h
+
+        src/Interaction/Items/ItemGeneration/ItemGeneration.cpp
+        src/Interaction/Items/ItemGeneration/ItemGeneration.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationSeed.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationSeed.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationBase.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationBase.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationRarity.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationRarity.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationQuality.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationQuality.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationMaterial.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationMaterial.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationManufacturer.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationManufacturer.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationAffixes.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationAffixes.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationParts.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationParts.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationTags.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationTags.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationStats.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationStats.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.cpp
+        src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
+        src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
         src/Main/main.cpp
-        src/Graphics/DEC_descriptors_indexing.cpp src/Graphics/DEC_descriptors_indexing.h src/Interaction/Items/ItemGeneration/ItemGeneration.cpp src/Interaction/Items/ItemGeneration/ItemGeneration.h src/Interaction/Items/ItemGeneration/ItemGenerationSeed.cpp src/Interaction/Items/ItemGeneration/ItemGenerationSeed.h src/Interaction/Items/ItemGeneration/ItemGenerationBase.cpp src/Interaction/Items/ItemGeneration/ItemGenerationBase.h src/Interaction/Items/ItemGeneration/ItemGenerationRarity.cpp src/Interaction/Items/ItemGeneration/ItemGenerationRarity.h src/Interaction/Items/ItemGeneration/ItemGenerationQuality.cpp src/Interaction/Items/ItemGeneration/ItemGenerationQuality.h src/Interaction/Items/ItemGeneration/ItemGenerationMaterial.cpp src/Interaction/Items/ItemGeneration/ItemGenerationMaterial.h src/Interaction/Items/ItemGeneration/ItemGenerationManufacturer.cpp src/Interaction/Items/ItemGeneration/ItemGenerationManufacturer.h src/Interaction/Items/ItemGeneration/ItemGenerationAffixes.cpp src/Interaction/Items/ItemGeneration/ItemGenerationAffixes.h src/Interaction/Items/ItemGeneration/ItemGenerationParts.cpp src/Interaction/Items/ItemGeneration/ItemGenerationParts.h src/Interaction/Items/ItemGeneration/ItemGenerationTags.cpp src/Interaction/Items/ItemGeneration/ItemGenerationTags.h src/Interaction/Items/ItemGeneration/ItemGenerationStats.cpp src/Interaction/Items/ItemGeneration/ItemGenerationStats.h src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.cpp src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h)
+       )
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
