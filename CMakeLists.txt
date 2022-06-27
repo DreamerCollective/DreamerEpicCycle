@@ -102,7 +102,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
         src/Main/main.cpp
-       )
+        src/Interaction/Civilisation/CivilisationModule.h src/Interaction/Civilisation/CivilisationComponents.h)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
