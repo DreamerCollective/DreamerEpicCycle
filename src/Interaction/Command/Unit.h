@@ -4,22 +4,17 @@
 #include <cstdint>
 #include "flecs/flecs.h"
 
-struct UnitBase
-{
-	int organisationLevel;
-	int maxSubUnits;
-	int totalSubUnits;
-};
 
-struct SpawnUnit 
-{
-	int organisationLevelSpawning;
-	bool shouldSpawnWithSubUnits;
-};
 
-class Unit
+struct Unit
 {
+    explicit Unit(flecs::world& world)
+    {
+        world.module<Unit>();
+
+        world.system<SpawnUnit>("CreateUnitOnSimulation").multi_threaded();
+    }
 public:
-	static void CreateUnit(flecs::iter& iter, SpawnUnit* su);
+	static void CreateUnitOnSimulation(flecs::iter& iter, SpawnUnit* su);
 };
 
