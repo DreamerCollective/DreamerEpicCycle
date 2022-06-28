@@ -41,6 +41,7 @@ add_executable(DreamerEpicCycle
         src/Graphics/lve_window.hpp
         src/Graphics/DEC_descriptors_indexing.cpp
         src/Graphics/DEC_descriptors_indexing.h
+        src/Graphics/RenderingModule.h
         third_party/tinyobjloader/tiny_obj_loader.h
 
         third_party/flecs/flecs.c
@@ -68,6 +69,10 @@ add_executable(DreamerEpicCycle
         src/Interaction/Universe/Area/ChunkCreation.h
         src/Interaction/Universe/Area/ChunkCreation.cpp
 
+        src/Interaction/Civilisation/CivilisationModule.h
+        src/Interaction/Civilisation/CivilisationComponents.h
+
+        src/Interaction/Command/Unit.cpp
 
         src/Interaction/Items/ItemComponents.h
         src/Interaction/Items/ItemConfig.cpp
@@ -101,8 +106,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp
-        src/Interaction/Civilisation/CivilisationModule.h src/Interaction/Civilisation/CivilisationComponents.h)
+        src/Main/main.cpp src/Interaction/Command/UnitComponents.h)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
