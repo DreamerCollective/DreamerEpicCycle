@@ -46,92 +46,92 @@ struct CharactersComponents
 
     struct CharacterStrengthAttribute
     {
-        int Strength;
+        uint32_t Strength;
     };
 
     struct CharacterDexterityAttribute
     {
-        int Dexterity;
+        uint32_t Dexterity;
     };
 
     struct CharacterIntelligenceAttribute
     {
-        int Intelligence;
+        uint32_t Intelligence;
     };
 
     struct CharacterWillpowerAttribute
     {
-        int Willpower;
+        uint32_t Willpower;
     };
 
     struct CharacterEnduranceAttribute
     {
-        int Endurance;
+        uint32_t Endurance;
     };
 
     struct CharacterLuckAttribute
     {
-        int Luck;
+        uint32_t Luck;
     };
 
     struct CharacterCharismaAttribute
     {
-        int Charisma;
+        uint32_t Charisma;
     };
 
     struct CharacterWisdomAttribute
     {
-        int Wisdom;
+        uint32_t Wisdom;
     };
 
     struct CharacterMagicAttribute
     {
-        int Magic;
+        uint32_t Magic;
     };
 
     struct CharacterNullAttribute
     {
-        int Null;
+        uint32_t Null;
     };
 
     struct CharacterLifeStats
     {
-        int Life;
+        uint32_t Life;
         float LifeRegenRate;
         float LifeRegenDelay;
     };
 
     struct CharacterEnergyStats
     {
-        int Energy;
+        uint32_t Energy;
         float EnergyRegenRate;
         float EnergyRegenDelay;
     };
 
     struct CharacterArmourStats
     {
-        int Armour;
+        uint32_t Armour;
         float ArmourRegenRate;
         float ArmourRegenDelay;
     };
 
     struct CharacterShieldStats
     {
-        int Shield;
+        uint32_t Shield;
         float ShieldRegenRate;
         float ShieldRegenDelay;
     };
 
     struct CharacterMagicStats
     {
-        int Magic;
+        uint32_t Magic;
         float MagicRegenRate;
         float MagicRegenDelay;
     };
 
     struct CharacterNullStats
     {
-        int Null;
+        uint32_t Null;
         float NullRegenRate;
         float NullRegenDelay;
     };
@@ -148,9 +148,9 @@ struct CharactersComponents
 
     struct CharacterStatNumbers
     {
-        int addFromGearMods, addFromTreeMods;
-        int minusFromGearMods, minusFromTreeMods;
-        int flatTotal;
+        uint32_t addFromGearMods, addFromTreeMods;
+        uint32_t minusFromGearMods, minusFromTreeMods;
+        uint32_t flatTotal;
         float increasedFromGearMods, increasedFromTreeMods;
         float decreasedFromGearMods, decreasedFromTreeMods;
         float additivePercentageTotal;
@@ -168,8 +168,8 @@ struct CharactersComponents
 
     struct PassiveTreeModifier
     {
-        int intmodifier;
-        int floatmodifier;
+        uint32_t intmodifier;
+        uint32_t floatmodifier;
     };
 
     struct PassiveTreeSkillPointsCost
