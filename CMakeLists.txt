@@ -106,7 +106,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp src/Interaction/Command/UnitComponents.h)
+        src/Main/main.cpp src/Interaction/Command/UnitComponents.h src/Graphics/gem_meshoptimzer.cpp src/Graphics/gem_meshoptimzer.h)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
