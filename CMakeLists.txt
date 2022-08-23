@@ -42,6 +42,8 @@ add_executable(DreamerEpicCycle
         src/Graphics/DEC_descriptors_indexing.cpp
         src/Graphics/DEC_descriptors_indexing.h
         src/Graphics/RenderingModule.h
+        src/Graphics/gem_meshoptimzer.cpp
+        src/Graphics/gem_meshoptimzer.h
         third_party/tinyobjloader/tiny_obj_loader.h
 
         third_party/flecs/flecs.c
@@ -73,12 +75,15 @@ add_executable(DreamerEpicCycle
         src/Interaction/Civilisation/CivilisationComponents.h
 
         src/Interaction/Command/Unit.cpp
+        src/Interaction/Command/UnitComponents.h
 
         src/Interaction/Items/ItemComponents.h
-        src/Interaction/Items/ItemConfig.cpp
-        src/Interaction/Items/ItemConfig.h
-        src/Interaction/Items/ItemConfigComponents.h
         src/Interaction/Items/ItemModule.h
+
+        src/Interaction/Items/ItemConfig/ItemConfig.cpp
+        src/Interaction/Items/ItemConfig/ItemConfig.h
+        src/Interaction/Items/ItemConfig/ItemConfigComponents.h
+        src/Interaction/Items/ItemConfig/ItemConfigModule.h
 
         src/Interaction/Items/ItemGeneration/ItemGeneration.cpp
         src/Interaction/Items/ItemGeneration/ItemGeneration.h
@@ -106,7 +111,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp src/Interaction/Command/UnitComponents.h src/Graphics/gem_meshoptimzer.cpp src/Graphics/gem_meshoptimzer.h)
+        src/Main/main.cpp  )
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
