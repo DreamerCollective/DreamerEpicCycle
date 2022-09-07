@@ -44,10 +44,12 @@ add_executable(DreamerEpicCycle
         src/Graphics/RenderingModule.h
         src/Graphics/gem_meshoptimzer.cpp
         src/Graphics/gem_meshoptimzer.h
-        third_party/tinyobjloader/tiny_obj_loader.h
 
+        third_party/tinyobjloader/tiny_obj_loader.h
         third_party/flecs/flecs.c
         third_party/flecs/flecs.h
+        third_party/simdjson/simdjson.cpp
+        third_party/simdjson/simdjson.h
 
         src/Interaction/Helpers/MathHelpers.h
         src/Interaction/Helpers/MathHelpers.cpp
