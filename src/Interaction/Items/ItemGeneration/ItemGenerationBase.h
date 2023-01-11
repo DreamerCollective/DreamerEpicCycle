@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <cstdlib>
 #include "flecs/flecs.h"
-#include "../ItemConfig.h"
+#include "../ItemConfig/ItemConfig.h"
 #include "../ItemComponents.h"
 #include "../../Helpers/MathHelpers.h"
 using namespace std;

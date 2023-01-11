@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <cstdlib>
 #include "flecs/flecs.h"
-#include "../ItemConfig.h"
+#include "../ItemConfig/ItemConfig.h"
 #include "../ItemComponents.h"
 #include "ItemGenerationAffixes.h"
 #include "ItemGenerationBase.h"

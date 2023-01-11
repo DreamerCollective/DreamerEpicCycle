@@ -158,18 +158,18 @@ void ItemConfig::StartConfig(const flecs::iter& iter, ItemConfigComponents::Conf
             auto ConfigItemBronzeFalx = iter.world().entity(); //"One Handed Short Sword Bronze Falx"
             auto ConfigItemBronzeFalxBase = iter.world().entity().child_of(ConfigItemBronzeFalx);
 
-            ondemand::parser parser;
-            auto json = padded_string::load("ItemJSON/ItemRarityCommon.json");
-            auto itemRarityCommon = parser.iterate(json);
-            auto *ptr = itemRarityCommon;
-            auto ConfigAutoItemRarityCommon = iter.world().entity();
-            auto *ptr = ConfigAutoItemRarityCommon.get_mut<ItemConfigComponents::ItemRarityConfig>();
-            ecs_parse_json(iter.world(), "{..}", iter.world().id<ItemConfigComponents::ItemRarityConfig>(), ptr, 0);
+//            ondemand::parser parser;
+//            auto json = padded_string::load("ItemJSON/ItemRarityCommon.json");
+//            auto itemRarityCommon = parser.iterate(json);
+//            auto *ptr = itemRarityCommon;
+//            auto ConfigAutoItemRarityCommon = iter.world().entity();
+//            auto *ptr = ConfigAutoItemRarityCommon.get_mut<ItemConfigComponents::ItemRarityConfig>();
+//            ecs_parse_json(iter.world(), "{..}", iter.world().id<ItemConfigComponents::ItemRarityConfig>(), ptr, 0);
 
             ConfigItemBronzeFalx.set<ItemConfigComponents::ItemBaseConfig>({1});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigCriticalDamage>({15,20});
-            auto *ptr = ConfigItemBronzeFalx.get_mut<ItemConfigComponents::ItemStatConfigCriticalDamage>();
-            ecs_parse_json(iter.world(), "{..}", iter.world().id<ItemConfigComponents::ItemStatConfigCriticalDamage>(), ptr, 0);
+            //auto *ptr = ConfigItemBronzeFalx.get_mut<ItemConfigComponents::ItemStatConfigCriticalDamage>();
+            //ecs_parse_json(iter.world(), "{..}", iter.world().id<ItemConfigComponents::ItemStatConfigCriticalDamage>(), ptr, 0);
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigPhysicalDamage>({23,30});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigMagicalDamage>({3,6});
             ConfigItemBronzeFalxBase.set<ItemConfigComponents::ItemStatConfigHandling>({1.5,2.6});
