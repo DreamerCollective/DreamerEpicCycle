@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21.1)
 project(DreamerEpicCycle)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 include_directories(DreamerEpicCycle/src)
 include_directories(DreamerEpicCycle/third-party)
@@ -9,47 +9,68 @@ include_directories(DreamerEpicCycle/shaders)
 
 
 add_executable(DreamerEpicCycle
-        src/Graphics/first_app.cpp
-        src/Graphics/first_app.hpp
-        src/Graphics/keyboard_movement_controller.cpp
-        src/Graphics/keyboard_movement_controller.hpp
-        src/Graphics/lve_buffer.cpp
-        src/Graphics/lve_buffer.hpp
-        src/Graphics/lve_descriptors.cpp
-        src/Graphics/lve_descriptors.hpp
-        src/Graphics/lve_camera.cpp
-        src/Graphics/lve_camera.hpp
-        src/Graphics/lve_device.cpp
-        src/Graphics/lve_device.hpp
-        src/Graphics/lve_frame_info.hpp
-        src/Graphics/lve_game_object.cpp
-        src/Graphics/lve_game_object.hpp
-        src/Graphics/lve_model.cpp
-        src/Graphics/lve_model.hpp
-        src/Graphics/lve_pipeline.cpp
-        src/Graphics/lve_pipeline.hpp
-        src/Graphics/lve_renderer.cpp
-        src/Graphics/lve_renderer.hpp
-        src/Graphics/lve_swap_chain.cpp
-        src/Graphics/lve_swap_chain.hpp
-        src/Graphics/lve_utils.hpp
-        src/Graphics/systems/simple_render_system.cpp
-        src/Graphics/systems/simple_render_system.hpp
-        src/Graphics/systems/point_light_system.cpp
-        src/Graphics/systems/point_light_system.hpp
-        src/Graphics/lve_window.cpp
-        src/Graphics/lve_window.hpp
-        src/Graphics/DEC_descriptors_indexing.cpp
-        src/Graphics/DEC_descriptors_indexing.h
-        src/Graphics/RenderingModule.h
-        src/Graphics/gem_meshoptimzer.cpp
-        src/Graphics/gem_meshoptimzer.h
 
         third_party/tinyobjloader/tiny_obj_loader.h
         third_party/flecs/flecs.c
         third_party/flecs/flecs.h
         third_party/simdjson/simdjson.cpp
         third_party/simdjson/simdjson.h
+
+        src/Graphics/control/app.cpp
+        src/Graphics/control/app.h
+        src/Graphics/control/logging.cpp
+        src/Graphics/control/logging.h
+
+        src/Graphics/model/scene.cpp
+        src/Graphics/model/scene.h
+        src/Graphics/model/vertex_menagerie.cpp
+        src/Graphics/model/vertex_menagerie.h
+
+        src/Graphics/view/vkImage/cubemap.cpp
+        src/Graphics/view/vkImage/cubemap.h
+        src/Graphics/view/vkImage/image.cpp
+        src/Graphics/view/vkImage/image.h
+        src/Graphics/view/vkImage/stb_image.h
+        src/Graphics/view/vkImage/texture.cpp
+        src/Graphics/view/vkImage/texture.h
+
+        src/Graphics/view/vkInit/commands.h
+        src/Graphics/view/vkInit/descriptors.cpp
+        src/Graphics/view/vkInit/descriptors.h
+        src/Graphics/view/vkInit/device.h
+        src/Graphics/view/vkInit/framebuffer.h
+        src/Graphics/view/vkInit/instance.h
+        src/Graphics/view/vkInit/pipeline.cpp
+        src/Graphics/view/vkInit/pipeline.h
+        src/Graphics/view/vkInit/swapchain.h
+        src/Graphics/view/vkInit/sync.h
+
+        src/Graphics/view/vkJob/job.h
+        src/Graphics/view/vkJob/job.cpp
+        src/Graphics/view/vkJob/worker_thread.h
+        src/Graphics/view/vkJob/worker_thread.cpp
+
+        src/Graphics/view/vkMesh/mesh.h
+        src/Graphics/view/vkMesh/obj_mesh.h
+        src/Graphics/view/vkMesh/obj_mesh.cpp
+
+        src/Graphics/view/vkUtil/frame.h
+        src/Graphics/view/vkUtil/frame.cpp
+        src/Graphics/view/vkUtil/memory.h
+        src/Graphics/view/vkUtil/memory.cpp
+        src/Graphics/view/vkUtil/queue_families.h
+        src/Graphics/view/vkUtil/render_structs.h
+        src/Graphics/view/vkUtil/shaders.cpp
+        src/Graphics/view/vkUtil/shaders.h
+        src/Graphics/view/vkUtil/single_time_commands.h
+        src/Graphics/view/vkUtil/single_time_commands.cpp
+
+        src/Graphics/view/engine.cpp
+        src/Graphics/view/engine.h
+
+        src/Graphics/config.h
+        src/Graphics/config.cpp
+
 
         src/Interaction/Helpers/MathHelpers.h
         src/Interaction/Helpers/MathHelpers.cpp
@@ -113,7 +134,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp  )
+        src/Main/main.cpp src/Graphics/config.cpp src/Graphics/config.cpp src/Graphics/view/vkImage/cubemap.cpp)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC

@@ -1,4 +1,4 @@
-/* Copyright (c) 2021, Dreamer Collective
+/* Copyright (c) 2023, Dreamer Collective
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -17,50 +17,43 @@
 
 #include "flecs/flecs.h"
 #include "../Interaction/Items/ItemModule.h"
-#include "../Graphics/first_app.hpp"
 #include <iostream>
-
-using namespace std;
+#include "../Graphics/control/app.h"
 
 int main() 
 {
-    bool ActiviateVulkan = false;
+    bool ActiviateVulkan = true;
 
-    flecs::world world;
+    bool ActiviateFlecs = false;
 
-    //cout << "Type the amount of items to spawn" << std::endl;
+    if(ActiviateFlecs) {
 
-    //cin >> AmountofItemstoSpawn;
+        flecs::world world;
 
-    world.import<ItemConfig>();
+        //cout << "Type the amount of items to spawn" << std::endl;
 
-    world.entity("Item").set<ItemConfigComponents::ConfigStage>({ 1 });
+        //cin >> AmountofItemstoSpawn;
 
-    world.set_target_fps(60);
+        world.import<ItemConfig>();
 
-    world.import<flecs::monitor>();
+        world.entity("Item").set<ItemConfigComponents::ConfigStage>({1});
 
-    //world.set_threads(12);
+        world.set_target_fps(60);
 
-    world.app().enable_rest(true).run();
+        world.import<flecs::monitor>();
 
-    while(world.progress());
+        world.app().enable_rest(true).run();
 
-    if(ActiviateVulkan)
-    {
-        lve::FirstApp app{};
-
-        try
-        {
-            app.run();
-        }
-        catch (const std::exception &e)
-        {
-            std::cerr << e.what() << '\n';
-            return EXIT_FAILURE;
-        }
-
-        return EXIT_SUCCESS;
+        while (world.progress());
     }
+
+    if(ActiviateVulkan) {
+        App *myApp = new App(640, 480, true);
+
+        myApp->run();
+        delete myApp;
+    }
+
+    return 0;
 
 }
