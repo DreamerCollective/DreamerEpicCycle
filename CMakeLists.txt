@@ -134,7 +134,9 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp src/Graphics/config.cpp src/Graphics/config.cpp src/Graphics/view/vkImage/cubemap.cpp)
+        src/Main/main.cpp src/Graphics/config.cpp src/Graphics/config.cpp src/Graphics/view/vkImage/cubemap.cpp
+        src/Graphics/view/vkInit/mathhelpers.cpp
+        src/Graphics/view/vkInit/mathhelpers.h)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC

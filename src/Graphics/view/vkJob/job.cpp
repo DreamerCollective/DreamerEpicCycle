@@ -1,14 +1,13 @@
 #include "job.h"
 
-vkJob::MakeModel::MakeModel(vkMesh::ObjMesh& mesh, const char* objFilepath, const char* mtlFilepath, glm::mat4 preTransform):
+vkJob::MakeModel::MakeModel(vkMesh::ObjMesh& mesh, const char* objFilepath, const char* mtlFilepath):
 mesh(mesh) {
 	this->objFilepath = objFilepath;
 	this->mtlFilepath = mtlFilepath;
-	this->preTransform = preTransform;
 }
 
 void vkJob::MakeModel::execute(vk::CommandBuffer commandBuffer, vk::Queue queue) {
-	mesh.load(objFilepath, mtlFilepath, preTransform);
+	mesh.load(objFilepath, mtlFilepath);
 	status = JobStatus::COMPLETE;
 }
 

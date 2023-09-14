@@ -41,9 +41,7 @@ struct Buffer {
 
 //--------- Assets -------------//
 enum class meshTypes {
-    GIRL,
-    GROUND,
-    SKULL
+    SPHERE,
 };
 
 enum class pipelineType {

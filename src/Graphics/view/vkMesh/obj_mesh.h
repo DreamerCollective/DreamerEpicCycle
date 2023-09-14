@@ -12,9 +12,8 @@ namespace vkMesh {
 		std::unordered_map<std::string, uint32_t> history;
 		std::unordered_map<std::string, glm::vec3> colorLookup;
 		glm::vec3 brushColor;
-		glm::mat4 preTransform;
 
-		void load(const char* objFilepath, const char* mtlFilepath, glm::mat4 preTransform);
+		void load(const char* objFilepath, const char* mtlFilepath);
 
 		void read_vertex_data(const std::vector<std::string>& words);
 

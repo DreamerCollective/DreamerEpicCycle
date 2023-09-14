@@ -48,7 +48,7 @@ int main()
     }
 
     if(ActiviateVulkan) {
-        App *myApp = new App(640, 480, true);
+        App *myApp = new App(1960, 1080, true);
 
         myApp->run();
         delete myApp;

@@ -119,7 +119,7 @@ void Engine::make_descriptor_set_layouts() {
 	bindings.indices.push_back(0);
 	bindings.types.push_back(vk::DescriptorType::eUniformBuffer);
 	bindings.counts.push_back(1);
-	bindings.stages.push_back(vk::ShaderStageFlagBits::eVertex);
+	bindings.stages.emplace_back(vk::ShaderStageFlagBits::eVertex);
 
 	frameSetLayout[pipelineType::SKY] = vkInit::make_descriptor_set_layout(device, bindings);
 
@@ -128,7 +128,7 @@ void Engine::make_descriptor_set_layouts() {
 	bindings.indices.push_back(1);
 	bindings.types.push_back(vk::DescriptorType::eStorageBuffer);
 	bindings.counts.push_back(1);
-	bindings.stages.push_back(vk::ShaderStageFlagBits::eVertex);
+	bindings.stages.emplace_back(vk::ShaderStageFlagBits::eVertex);
 
 	frameSetLayout[pipelineType::STANDARD] = vkInit::make_descriptor_set_layout(device, bindings);
 
@@ -247,10 +247,9 @@ void Engine::make_worker_threads() {
 	vkInit::commandBufferInputChunk commandBufferInput = { device, commandPool, swapchainFrames };
 	for (size_t i = 0; i < threadCount; ++i) {
 		vk::CommandBuffer commandBuffer = vkInit::make_command_buffer(commandBufferInput);
-		workers.push_back(
-			std::thread(
+		workers.emplace_back(
 				vkJob::WorkerThread(workQueue, done, commandBuffer, graphicsQueue)
-			)
+
 		);
 	}
 }
@@ -260,30 +259,22 @@ void Engine::make_assets() {
 	//Meshes
 	meshes = new VertexMenagerie();
 	std::unordered_map<meshTypes, std::vector<const char*>> model_filenames = {
-		{meshTypes::GROUND, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/ground.obj",
-                             "C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/ground.mtl"}},
-		{meshTypes::GIRL, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/girl.obj",
-                           "C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/girl.mtl"}},
-		{meshTypes::SKULL, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/skull.obj",
-                            "C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/skull.mtl"}}
+		{meshTypes::SPHERE, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/IcoSphere.obj",
+                           "C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/models/IcoSphere.mtl"}},
 	};
-	std::unordered_map<meshTypes, glm::mat4> preTransforms = {
-		{meshTypes::GROUND, glm::mat4(1.0f)},
-		{meshTypes::GIRL, glm::rotate(
-			glm::mat4(1.0f), 
-			glm::radians(180.0f), 
-			glm::vec3(0.0f, 0.0f, 1.0f)
-		)},
-		{meshTypes::SKULL, glm::mat4(1.0f)}
-	};
+//	std::unordered_map<meshTypes, glm::mat4> objectTransforms = {
+//		{meshTypes::SPHERE, glm::rotate(
+//			glm::mat4(1.0f),
+//			glm::radians(0.0f),
+//			glm::vec3(0.0f, 0.0f, 1.0f)
+//		)},
+//	};
 	std::unordered_map<meshTypes, vkMesh::ObjMesh> loaded_models;
 
 	//Materials
 
-	std::unordered_map<meshTypes, std::vector<const char*>> filenames = {
-		{meshTypes::GROUND, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/tex/ground.jpg"}},
-		{meshTypes::GIRL, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/tex/none.png"}},
-		{meshTypes::SKULL, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/tex/skull.png"}}
+	std::unordered_map<meshTypes, std::vector<const char*>> tex_filenames = {
+		{meshTypes::SPHERE, {"C:/Users/David Work/Desktop/Dreamer Collective projects/DreamerEpicCycle/src/Graphics/tex/none.png"}},
 	};
 
 	//Make a descriptor pool to allocate sets.
@@ -291,27 +282,26 @@ void Engine::make_assets() {
 	bindings.count = 1;
 	bindings.types.push_back(vk::DescriptorType::eCombinedImageSampler);
 
-	meshDescriptorPool = vkInit::make_descriptor_pool(device, static_cast<uint32_t>(filenames.size()) + 1, bindings);
+	meshDescriptorPool = vkInit::make_descriptor_pool(device, static_cast<uint32_t>(tex_filenames.size()) + 1, bindings);
 
 	//Submit loading work
 	workQueue.lock.lock();
-	std::vector<meshTypes> mesh_types = { {meshTypes::GROUND, meshTypes::GIRL, meshTypes::SKULL} };
+	std::vector<meshTypes> mesh_types = { meshTypes::SPHERE };
 	for (meshTypes type : mesh_types) {
 		vkImage::TextureInputChunk textureInfo;
 		textureInfo.logicalDevice = device;
 		textureInfo.physicalDevice = physicalDevice;
 		textureInfo.layout = meshSetLayout[pipelineType::STANDARD];
 		textureInfo.descriptorPool = meshDescriptorPool;
-		textureInfo.filenames = filenames[type];
+		textureInfo.filenames = tex_filenames[type];
 		materials[type] = new vkImage::Texture();
 		loaded_models[type] = vkMesh::ObjMesh();
 		workQueue.add(
 			new vkJob::MakeTexture(materials[type], textureInfo)
 		);
 		workQueue.add(
-			new vkJob::MakeModel(loaded_models[type], 
-				model_filenames[type][0], model_filenames[type][1], 
-				preTransforms[type])
+			new vkJob::MakeModel(loaded_models[type],
+                                 model_filenames[type][0], model_filenames[type][1])
 		);
 	}
 	workQueue.lock.unlock();
@@ -382,35 +372,67 @@ void Engine::end_worker_threads() {
 
 void Engine::prepare_frame(uint32_t imageIndex, Scene* scene) {
 
-	vkUtil::SwapChainFrame& _frame = swapchainFrames[imageIndex];
+    vkUtil::SwapChainFrame &_frame = swapchainFrames[imageIndex];
 
-	glm::vec4 cam_vec_forwards = { 1.0f,  0.0f, 0.0f, 0.0f };
-	glm::vec4 cam_vec_right =    { 0.0f, -1.0f, 0.0f, 0.0f };
-	glm::vec4 cam_vec_up =       { 0.0f,  0.0f, 1.0f, 0.0f };
-	_frame.cameraVectorData.forwards = cam_vec_forwards;
-	_frame.cameraVectorData.right = cam_vec_right;
-	_frame.cameraVectorData.up = cam_vec_up;
-	memcpy(_frame.cameraVectorWriteLocation, &(_frame.cameraVectorData), sizeof(vkUtil::CameraVectors));
+    glm::vec4 cam_vec_forwards = {1.0f, 0.0f, 0.0f, 0.0f};
+    glm::vec4 cam_vec_right = {0.0f, -1.0f, 0.0f, 0.0f};
+    glm::vec4 cam_vec_up = {0.0f, 0.0f, 1.0f, 0.0f};
+    _frame.cameraVectorData.forwards = cam_vec_forwards;
+    _frame.cameraVectorData.right = cam_vec_right;
+    _frame.cameraVectorData.up = cam_vec_up;
+    memcpy(_frame.cameraVectorWriteLocation, &(_frame.cameraVectorData), sizeof(vkUtil::CameraVectors));
 
-	glm::vec3 eye = { -1.0f, 0.0f, 5.0f };
-	glm::vec3 center = { 1.0f, 0.0f, 5.0f };
-	glm::vec3 up = { 0.0f, 0.0f, 1.0f };
-	glm::mat4 view = glm::lookAt(eye, center, up);
+    glm::vec3 eye = {-1.0f, 0.0f, 5.0f};
+    glm::vec3 center = {1.0f, 0.0f, 5.0f};
+    glm::vec3 up = {0.0f, 0.0f, 1.0f};
+    glm::mat4 view = glm::lookAt(eye, center, up);
 
-	glm::mat4 projection = glm::perspective(glm::radians(45.0f), static_cast<float>(swapchainExtent.width) / static_cast<float>(swapchainExtent.height), 0.1f, 100.0f);
-	projection[1][1] *= -1;
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), static_cast<float>(swapchainExtent.width) /
+                                                                 static_cast<float>(swapchainExtent.height), 0.1f,
+                                            100.0f);
+    projection[1][1] *= -1;
 
-	_frame.cameraMatrixData.view = view;
-	_frame.cameraMatrixData.projection = projection;
-	_frame.cameraMatrixData.viewProjection = projection * view;
-	memcpy(_frame.cameraMatrixWriteLocation, &(_frame.cameraMatrixData), sizeof(vkUtil::CameraMatrices));
+    _frame.cameraMatrixData.view = view;
+    _frame.cameraMatrixData.projection = projection;
+    _frame.cameraMatrixData.viewProjection = projection * view;
+    memcpy(_frame.cameraMatrixWriteLocation, &(_frame.cameraMatrixData), sizeof(vkUtil::CameraMatrices));
 
-	size_t i = 0;
-	for (std::pair<meshTypes, std::vector<glm::vec3>> pair : scene->positions) {
-		for (glm::vec3& position : pair.second) {
-			_frame.modelTransforms[i++] = glm::translate(glm::mat4(1.0f), position);
-		}
-	}
+    size_t i = 0;
+//    for (std::pair<meshTypes, std::vector<glm::mat4x4>> mpair: scene->transformmatrix)
+//    {
+//        for (glm::mat4 &transformmatrix: mpair.second) {
+            for (std::pair<meshTypes, std::vector<glm::vec3>> pair: scene->position) {
+                for (glm::vec3 &position: pair.second) {
+                    _frame.modelTransforms[i++] = glm::translate(glm::mat4(1.0f), position);
+                }
+            }
+//            for (std::pair<meshTypes, std::vector<glm::vec3>> pair: scene->rotation) {
+//                for (glm::vec3 &rotation: pair.second) {
+//                    _frame.modelTransforms[i++] = glm::rotate(
+//                            glm::mat4(transformmatrix),
+//                            glm::radians(rotation.x),
+//                            glm::vec3(1, 0, 0)
+//                    );
+//                    _frame.modelTransforms[i++] = glm::rotate(
+//                            glm::mat4(transformmatrix),
+//                            glm::radians(rotation.y),
+//                            glm::vec3(0,1,0)
+//                    );
+//                    _frame.modelTransforms[i++] = glm::rotate(
+//                            glm::mat4(transformmatrix),
+//                            glm::radians(rotation.z),
+//                            glm::vec3(0,0,1)
+//                    );
+//                }
+//            }
+//            for (std::pair<meshTypes, std::vector<glm::vec3>> pair: scene->scale) {
+//                for (glm::vec3 &scale: pair.second) {
+//                    _frame.modelTransforms[i++] = glm::scale(glm::mat4(transformmatrix), scale);
+//                }
+//            }
+//        }
+//    }
+
 	memcpy(_frame.modelBufferWriteLocation, _frame.modelTransforms.data(), i * sizeof(glm::mat4));
 
 	_frame.write_descriptor_set();
@@ -482,7 +504,7 @@ void Engine::record_draw_commands_scene(vk::CommandBuffer commandBuffer, uint32_
 	prepare_scene(commandBuffer);
 
 	uint32_t startInstance = 0;
-	for (std::pair<meshTypes, std::vector<glm::vec3>> pair : scene->positions) {
+	for (std::pair<meshTypes, std::vector<glm::vec3>> pair : scene->position) {
 		render_objects(
 			commandBuffer, pair.first, startInstance, static_cast<uint32_t>(pair.second.size())
 		);

@@ -1,8 +1,6 @@
 #include "obj_mesh.h"
 
-void vkMesh::ObjMesh::load(const char* objFilepath, const char* mtlFilepath, glm::mat4 preTransform) {
-
-	this->preTransform = preTransform;
+void vkMesh::ObjMesh::load(const char* objFilepath, const char* mtlFilepath) {
 
 	std::ifstream file;
 	file.open(mtlFilepath);
@@ -90,8 +88,7 @@ void vkMesh::ObjMesh::load(const char* objFilepath, const char* mtlFilepath, glm
 
 void vkMesh::ObjMesh::read_vertex_data(const std::vector<std::string>& words) {
 	glm::vec4 new_vertex = glm::vec4(std::stof(words[1]), std::stof(words[2]), std::stof(words[3]), 1.0f);
-	glm::vec3 transformed_vertex = glm::vec3(preTransform * new_vertex);
-	v.push_back(transformed_vertex);
+	v.emplace_back(new_vertex);
 }
 
 void vkMesh::ObjMesh::read_texcoord_data(const std::vector<std::string>& words) {
@@ -101,8 +98,7 @@ void vkMesh::ObjMesh::read_texcoord_data(const std::vector<std::string>& words) 
 
 void vkMesh::ObjMesh::read_normal_data(const std::vector<std::string>& words) {
 	glm::vec4 new_normal = glm::vec4(std::stof(words[1]), std::stof(words[2]), std::stof(words[3]), 0.0f);
-	glm::vec3 transformed_normal = glm::vec3(preTransform * new_normal);
-	vn.push_back(transformed_normal);
+	vn.push_back(new_normal);
 }
 
 void vkMesh::ObjMesh::read_face_data(const std::vector<std::string>& words) {

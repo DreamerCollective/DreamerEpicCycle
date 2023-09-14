@@ -23,9 +23,8 @@ namespace vkJob {
 	public:
 		const char* objFilepath;
 		const char* mtlFilepath;
-		glm::mat4 preTransform;
 		vkMesh::ObjMesh& mesh;
-		MakeModel(vkMesh::ObjMesh& mesh, const char* objFilepath, const char* mtlFilepath, glm::mat4 preTransform);
+		MakeModel(vkMesh::ObjMesh& mesh, const char* objFilepath, const char* mtlFilepath);
 		virtual void execute(vk::CommandBuffer commandBuffer, vk::Queue queue) final;
 	};
 

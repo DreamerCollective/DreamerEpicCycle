@@ -27,7 +27,7 @@ void vkUtil::SwapChainFrame::make_descriptor_resources() {
 
 	modelTransforms.reserve(1024);
 	for (int i = 0; i < 1024; ++i) {
-		modelTransforms.push_back(glm::mat4(1.0f));
+		modelTransforms.emplace_back(1.0f);
 	}
 
 	/*
