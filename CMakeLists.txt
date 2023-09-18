@@ -11,10 +11,49 @@ include_directories(DreamerEpicCycle/shaders)
 add_executable(DreamerEpicCycle
 
         third_party/tinyobjloader/tiny_obj_loader.h
-        third_party/flecs/flecs.c
-        third_party/flecs/flecs.h
+        third_party/flecs/flecs-base/flecs.c
+        third_party/flecs/flecs-base/flecs.h
+        third_party/flecs/flecs-components-cglm/src/main.c
+        third_party/flecs/flecs-components-cglm/include/flecs_components_cglm.h
+        third_party/flecs/flecs-components-cglm/include/flecs-components-cglm/bake_config.h
+        third_party/flecs/flecs-components-geometry/src/geometry.c
+        third_party/flecs/flecs-components-geometry/include/flecs_components_geometry.h
+        third_party/flecs/flecs-components-geometry/include/flecs-components-geometry/bake_config.h
+        third_party/flecs/flecs-components-graphics/src/graphics.c
+        third_party/flecs/flecs-components-graphics/flecs_components_graphics.c
+        third_party/flecs/flecs-components-graphics/include/flecs_components_graphics.h
+        third_party/flecs/flecs-components-graphics/include/flecs-components-graphics/bake_config.h
+        third_party/flecs/flecs-components-gui/src/main.c
+        third_party/flecs/flecs-components-gui/include/flecs_components_gui.h
+        third_party/flecs/flecs-components-gui/include/flecs-components-gui/bake_config.h
+        third_party/flecs/flecs-components-input/src/main.c
+        third_party/flecs/flecs-components-input/include/flecs_components_input.h
+        third_party/flecs/flecs-components-input/include/flecs-components-input/bake_config.h
+        third_party/flecs/flecs-components-transform/src/transform.c
+        third_party/flecs/flecs-components-transform/include/flecs_components_transform.h
+        third_party/flecs/flecs-components-transform/include/flecs-components-transform/bake_config.h
+        third_party/flecs/flecs-components-physics/src/physics.c
+        third_party/flecs/flecs-components-physics/include/flecs_components_physics.h
+        third_party/flecs/flecs-components-physics/include/flecs-components-physics/bake_config.h
+        third_party/flecs/flecs-systems-transform/src/main.c
+        third_party/flecs/flecs-systems-transform/include/flecs_systems_transform.h
+        third_party/flecs/flecs-systems-transform/include/flecs-systems-transform/bake_config.h
+        third_party/flecs/flecs-systems-physics/src/main.c
+        third_party/flecs/flecs-systems-physics/src/octree.c
+        third_party/flecs/flecs-systems-physics/src/spatial_query.c
+        third_party/flecs/flecs-systems-physics/include/flecs_systems_physics.h
+        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/bake_config.h
+        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/octree.h
+        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/spatial_query.h
+        third_party/flecs/flecs-game/src/main.c
+        third_party/flecs/flecs-game/src/light_controller.c
+        third_party/flecs/flecs-game/src/world_cells.c
+        third_party/flecs/flecs-game/src/camera_controller.c
+        third_party/flecs/flecs-game/include/flecs_game.h
+        third_party/flecs/flecs-game/include/flecs-game/bake_config.h
         third_party/simdjson/simdjson.cpp
         third_party/simdjson/simdjson.h
+        third_party/cglm/include/cglm/cglm.h
 
         src/Graphics/control/app.cpp
         src/Graphics/control/app.h
@@ -135,8 +174,7 @@ add_executable(DreamerEpicCycle
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
         src/Main/main.cpp src/Graphics/config.cpp src/Graphics/config.cpp src/Graphics/view/vkImage/cubemap.cpp
-        src/Graphics/view/vkInit/mathhelpers.cpp
-        src/Graphics/view/vkInit/mathhelpers.h)
+)
 
 if (WIN32)
     target_include_directories(${PROJECT_NAME} PUBLIC
@@ -152,7 +190,10 @@ if (WIN32)
             )
 
     target_link_libraries(${PROJECT_NAME} glfw3 vulkan-1)
+
 elseif (UNIX)
     target_include_directories(${PROJECT_NAME} PUBLIC src/third_party)
     target_link_libraries(${PROJECT_NAME} glfw vulkan)
+
+
 endif()

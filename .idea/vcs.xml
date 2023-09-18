@@ -2,5 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/cglm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-cglm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-geometry" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-graphics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-gui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-input" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-physics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-transform" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-game" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-systems-physics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-systems-transform" vcs="Git" />
   </component>
 </project>

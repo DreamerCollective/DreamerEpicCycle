@@ -115,6 +115,13 @@ namespace vkInit {
 		message << "There are " << availableDevices.size() << " physical devices available on this system";
 		vkLogging::Logger::get_logger()->print(message.str());
 
+        VkPhysicalDeviceDescriptorIndexingFeatures indexing_features{ VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES_EXT, nullptr };
+        VkPhysicalDeviceFeatures2 device_features{ VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2, &indexing_features };
+
+        vkGetPhysicalDeviceFeatures2( vulkan_physical_device, &device_features );
+
+        bool bindless_supported = indexing_features.descriptorBindingPartiallyBound && indexing_features.runtimeDescriptorArray;
+
 		/*
 		* check if a suitable device can be found
 		*/

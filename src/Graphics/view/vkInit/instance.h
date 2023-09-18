@@ -101,7 +101,7 @@ namespace vkInit {
 
 		/*
 		* We can scan the system and check which version it will support up to,
-		* as of vulkan 1.1
+		* as of vulkan 1.3
 		*
 		* VkResult vkEnumerateInstanceVersion(
 			uint32_t*                                   pApiVersion);

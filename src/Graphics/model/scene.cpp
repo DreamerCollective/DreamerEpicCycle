@@ -6,19 +6,19 @@
 Scene::Scene() {
 
     position.insert({ meshTypes::SPHERE, {} });
-    for (int16_t x = 0; x <= 1000; x++)
+    for (int16_t x = 0; x <= 5000; x++)
     {
         position[meshTypes::SPHERE].emplace_back(CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 1000.0f), CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 100.0f), CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 100.0f));
     }
 
     rotation.insert({ meshTypes::SPHERE, {} });
-    for (int16_t x = 0; x <= 1000; x++)
+    for (int16_t x = 0; x <= 5000; x++)
     {
         rotation[meshTypes::SPHERE].emplace_back(CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 160.0f), CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 160.0f), CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 160.0f));
     }
 
     scale.insert({ meshTypes::SPHERE, {} });
-    for (int16_t x = 0; x <= 1000; x++)
+    for (int16_t x = 0; x <= 5000; x++)
     {
         float uniformscale = CreatingRandom32BitFloatNumbers(Scene::seed, 0.0f, 100.0f);
         scale[meshTypes::SPHERE].emplace_back(uniformscale, uniformscale, uniformscale);
