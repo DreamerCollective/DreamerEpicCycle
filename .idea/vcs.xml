@@ -2,6 +2,24 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/SPIRV-Cross" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/SPIRV-Headers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/SPIRV-Tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/Vulkan-Headers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/glslang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/googletest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/volk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentCore/ThirdParty/xxHash" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentFX" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentSamples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentSamples/ThirdParty/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentSamples/ThirdParty/nuklear" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/args" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/libpng" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/cglm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-cglm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-geometry" vcs="Git" />
