@@ -6,57 +6,31 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(DreamerEpicCycle/src)
 include_directories(DreamerEpicCycle/third-party)
 include_directories(DreamerEpicCycle/DiligentEngine)
+add_subdirectory(DiligentEngine)
+add_subdirectory(third_party/cglm)
+add_subdirectory(third_party/flecs/flecs)
+add_subdirectory(third_party/flecs/flecs-components-cglm)
+add_subdirectory(third_party/flecs/flecs-components-geometry)
+add_subdirectory(third_party/flecs/flecs-components-graphics)
+add_subdirectory(third_party/flecs/flecs-components-gui)
+add_subdirectory(third_party/flecs/flecs-components-input)
+add_subdirectory(third_party/flecs/flecs-components-physics)
+add_subdirectory(third_party/flecs/flecs-components-transform)
+add_subdirectory(third_party/flecs/flecs-game)
+add_subdirectory(third_party/flecs/flecs-systems-physics)
+add_subdirectory(third_party/flecs/flecs-systems-transform)
+
 
 
 add_executable(DreamerEpicCycle
 
         third_party/tinyobjloader/tiny_obj_loader.h
-        third_party/flecs/flecs-base/flecs.c
-        third_party/flecs/flecs-base/flecs.h
-        third_party/flecs/flecs-components-cglm/src/main.c
-        third_party/flecs/flecs-components-cglm/include/flecs_components_cglm.h
-        third_party/flecs/flecs-components-cglm/include/flecs-components-cglm/bake_config.h
-        third_party/flecs/flecs-components-geometry/src/geometry.c
-        third_party/flecs/flecs-components-geometry/include/flecs_components_geometry.h
-        third_party/flecs/flecs-components-geometry/include/flecs-components-geometry/bake_config.h
-        third_party/flecs/flecs-components-graphics/src/graphics.c
-        third_party/flecs/flecs-components-graphics/flecs_components_graphics.c
-        third_party/flecs/flecs-components-graphics/include/flecs_components_graphics.h
-        third_party/flecs/flecs-components-graphics/include/flecs-components-graphics/bake_config.h
-        third_party/flecs/flecs-components-gui/src/main.c
-        third_party/flecs/flecs-components-gui/include/flecs_components_gui.h
-        third_party/flecs/flecs-components-gui/include/flecs-components-gui/bake_config.h
-        third_party/flecs/flecs-components-input/src/main.c
-        third_party/flecs/flecs-components-input/include/flecs_components_input.h
-        third_party/flecs/flecs-components-input/include/flecs-components-input/bake_config.h
-        third_party/flecs/flecs-components-transform/src/transform.c
-        third_party/flecs/flecs-components-transform/include/flecs_components_transform.h
-        third_party/flecs/flecs-components-transform/include/flecs-components-transform/bake_config.h
-        third_party/flecs/flecs-components-physics/src/physics.c
-        third_party/flecs/flecs-components-physics/include/flecs_components_physics.h
-        third_party/flecs/flecs-components-physics/include/flecs-components-physics/bake_config.h
-        third_party/flecs/flecs-systems-transform/src/main.c
-        third_party/flecs/flecs-systems-transform/include/flecs_systems_transform.h
-        third_party/flecs/flecs-systems-transform/include/flecs-systems-transform/bake_config.h
-        third_party/flecs/flecs-systems-physics/src/main.c
-        third_party/flecs/flecs-systems-physics/src/octree.c
-        third_party/flecs/flecs-systems-physics/src/spatial_query.c
-        third_party/flecs/flecs-systems-physics/include/flecs_systems_physics.h
-        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/bake_config.h
-        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/octree.h
-        third_party/flecs/flecs-systems-physics/include/flecs-systems-physics/spatial_query.h
-        third_party/flecs/flecs-game/src/main.c
-        third_party/flecs/flecs-game/src/light_controller.c
-        third_party/flecs/flecs-game/src/world_cells.c
-        third_party/flecs/flecs-game/src/camera_controller.c
-        third_party/flecs/flecs-game/include/flecs_game.h
-        third_party/flecs/flecs-game/include/flecs-game/bake_config.h
+        third_party/tinyobjloader/tiny_obj_loader.c
+
         third_party/simdjson/simdjson.cpp
         third_party/simdjson/simdjson.h
-        third_party/cglm/include/cglm/cglm.h
 
         src/Graphics/engine.cpp
-        src/Graphics/engine.h
 
         src/Interaction/Helpers/MathHelpers.h
         src/Interaction/Helpers/MathHelpers.cpp

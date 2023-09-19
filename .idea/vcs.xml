@@ -20,7 +20,9 @@
     <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/args" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/imgui" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/libpng" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiligentEngine/DiligentTools/ThirdParty/zlib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/cglm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-cglm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-geometry" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/flecs/flecs-components-graphics" vcs="Git" />
