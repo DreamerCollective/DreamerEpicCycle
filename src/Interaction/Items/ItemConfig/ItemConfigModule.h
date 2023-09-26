@@ -1,4 +1,4 @@
-#include "flecs/flecs.h"
+#include "../../../third_party/flecs/flecs/flecs.h"
 #include "ItemConfig.h"
 #include "ItemConfigComponents.h"
 #include <iostream>

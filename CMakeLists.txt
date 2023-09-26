@@ -1,34 +1,15 @@
-cmake_minimum_required(VERSION 3.21.1)
+cmake_minimum_required(VERSION 3.25.3)
 project(DreamerEpicCycle)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 14)
 
 include_directories(DreamerEpicCycle/src)
 include_directories(DreamerEpicCycle/third-party)
-include_directories(DreamerEpicCycle/DiligentEngine)
 add_subdirectory(DiligentEngine)
-add_subdirectory(third_party/cglm)
 add_subdirectory(third_party/flecs/flecs)
-add_subdirectory(third_party/flecs/flecs-components-cglm)
-add_subdirectory(third_party/flecs/flecs-components-geometry)
-add_subdirectory(third_party/flecs/flecs-components-graphics)
-add_subdirectory(third_party/flecs/flecs-components-gui)
-add_subdirectory(third_party/flecs/flecs-components-input)
-add_subdirectory(third_party/flecs/flecs-components-physics)
-add_subdirectory(third_party/flecs/flecs-components-transform)
-add_subdirectory(third_party/flecs/flecs-game)
-add_subdirectory(third_party/flecs/flecs-systems-physics)
-add_subdirectory(third_party/flecs/flecs-systems-transform)
 
 
-
-add_executable(DreamerEpicCycle
-
-        third_party/tinyobjloader/tiny_obj_loader.h
-        third_party/tinyobjloader/tiny_obj_loader.c
-
-        third_party/simdjson/simdjson.cpp
-        third_party/simdjson/simdjson.h
+add_executable(DreamerEpicCycle WIN32
 
         src/Graphics/engine.cpp
 
@@ -97,25 +78,13 @@ add_executable(DreamerEpicCycle
         src/Main/main.cpp
 )
 
-if (WIN32)
-    target_include_directories(${PROJECT_NAME} PUBLIC
-            c:/SDK/VulkanSDK/Include
-            c:/SDK/glfw-3.3.4/include
-            c:/SDK/glm
-            ${PROJECT_SOURCE_DIR}/third_party
-            ${PROJECT_SOURCE_DIR}/DiligentEngine
-            )
+target_compile_options(DreamerEpicCycle PRIVATE -DUNICODE -DENGINE_DLL)
 
-    target_link_directories(${PROJECT_NAME} PUBLIC
-            c:/SDK/VulkanSDK/Lib
-            c:/SDK/glfw-3.3.4.bin.WIN64/lib-vc2019
-            )
+target_link_libraries(${PROJECT_NAME} PRIVATE
+Diligent-GraphicsEngineD3D11-shared
+Diligent-GraphicsEngineD3D12-shared
+Diligent-GraphicsEngineVk-shared)
 
-    target_link_libraries(${PROJECT_NAME} glfw3 vulkan-1)
-
-elseif (UNIX)
-    target_include_directories(${PROJECT_NAME} PUBLIC src/third_party)
-    target_link_libraries(${PROJECT_NAME} glfw vulkan)
+copy_required_dlls(DreamerEpicCycle)
 
 
-endif()

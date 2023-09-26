@@ -2,7 +2,7 @@
 
 #include <string>
 #include <cstdint>
-#include "flecs/flecs.h"
+#include "../../../third_party/flecs/flecs/flecs.h"
 #include "UnitComponents.h"
 
 

@@ -1,9 +1,8 @@
-#include "flecs/flecs.h"
 #pragma once
 
 #include <cstdint>
 #include <cstdlib>
-#include "flecs/flecs.h"
+#include "../../../../third_party/flecs/flecs/flecs.h"
 #include "../ItemConfig/ItemConfig.h"
 #include "../ItemComponents.h"
 #include "../../Helpers/MathHelpers.h"

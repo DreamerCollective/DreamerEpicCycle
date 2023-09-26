@@ -1,6 +1,6 @@
 
 #pragma once
-#include "flecs/flecs.h"
+#include "flecs/flecs/flecs.h"
 
 struct CivilisationComponents
 {

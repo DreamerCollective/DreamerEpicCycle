@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-#include "flecs/flecs.h"
+#include "../../third_party/flecs/flecs/flecs.h"
 #include "../Interaction/Items/ItemModule.h"
 #include <iostream>
-#include "../Graphics/control/app.h"
+#include "../Graphics/engine.cpp"
 
 int main() 
 {
@@ -48,10 +48,17 @@ int main()
     }
 
     if(ActiviateVulkan) {
-        App *myApp = new App(1960, 1080, true);
+        flecs::world world;
 
-        myApp->run();
-        delete myApp;
+        world.set_target_fps(60);
+
+        world.import<flecs::monitor>();
+
+        world.app().enable_rest(true).run();
+
+        while (world.progress());
+
+        DreamerEngine();
     }
 
     return 0;

@@ -21,7 +21,7 @@
 
 #include <iostream>
 
-#include "flecs/flecs.h"
+#include "../../../../third_party/flecs/flecs/flecs.h"
 
 struct GalaxyComponentsConfig
 {

@@ -16,14 +16,14 @@
  */
 
 #pragma once
-#include "flecs/flecs.h"
+#include "../../../../third_party/flecs/flecs/flecs.h"
 #include "../ItemComponents.h"
-#include "simdjson/simdjson.h"
+//#include "simdjson/simdjson.h"
 
 #include "ItemConfigComponents.h"
 #include <iostream>
 
-using namespace simdjson;
+//using namespace simdjson;
 
 using namespace std;
 
