@@ -18,7 +18,6 @@
 #include "../../third_party/flecs/flecs/flecs.h"
 #include "../Interaction/Items/ItemModule.h"
 #include <iostream>
-#include "../Graphics/engine.cpp"
 
 int main() 
 {
@@ -48,17 +47,8 @@ int main()
     }
 
     if(ActiviateVulkan) {
-        flecs::world world;
 
-        world.set_target_fps(60);
-
-        world.import<flecs::monitor>();
-
-        world.app().enable_rest(true).run();
-
-        while (world.progress());
-
-        DreamerEngine();
+        
     }
 
     return 0;

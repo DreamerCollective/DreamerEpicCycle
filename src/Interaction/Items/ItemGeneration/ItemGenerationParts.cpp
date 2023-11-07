@@ -7,13 +7,12 @@ void ItemGenerationParts::AddItemPartsComponenttoEntity(const flecs::iter &iter,
     {
         if (!iss->ItemPartsComponentsCreated)
         {
-            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc)
-                                 {
-                                     if(ibc.BaseTypeID == ib->BaseItemType)
-                                     {
+            ItemConfigQuery.each([&](ItemConfigComponents::ItemBaseConfig& ibc, ItemConfigComponents::ItemComponentsConfig& icc){
+                if(ibc.BaseTypeID == ib->BaseItemType)
+                {
 
-                                     }
-                                 });
+                }
+            });
             iss->ItemPartsComponentsCreated = true;
         }
     }
