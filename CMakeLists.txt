@@ -5,13 +5,119 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(DreamerEpicCycle/src)
 include_directories(DreamerEpicCycle/third-party)
-add_subdirectory(DiligentEngine)
-add_subdirectory(third_party/flecs/flecs)
+add_subdirectory(third_party/flecs/flecs-components-cglm)
+add_subdirectory(third_party/flecs/flecs-components-geometry)
+add_subdirectory(third_party/flecs/flecs-components-graphics)
+add_subdirectory(third_party/flecs/flecs-components-gui)
+add_subdirectory(third_party/flecs/flecs-components-input)
+add_subdirectory(third_party/flecs/flecs-components-physics)
+add_subdirectory(third_party/flecs/flecs-components-transform)
+add_subdirectory(third_party/flecs/flecs-game)
+add_subdirectory(third_party/flecs/flecs-systems-physics)
+add_subdirectory(third_party/flecs/flecs-systems-transform)
 
 
 add_executable(DreamerEpicCycle WIN32
 
-        src/Graphics/engine.cpp
+	
+
+       	src/Graphics/engine.cpp
+
+	src/Graphics/graphics/asynchronous_loader.cpp
+	src/Graphics/graphics/asynchronous_loader.hpp
+	src/Graphics/graphics/command_buffer.cpp
+	src/Graphics/graphics/command_buffer.hpp
+	src/Graphics/graphics/frame_graph.cpp
+	src/Graphics/graphics/frame_graph.hpp
+	src/Graphics/graphics/gltf_scene.cpp
+	src/Graphics/graphics/gltf_scene.hpp
+	src/Graphics/graphics/gpu_device.cpp
+	src/Graphics/graphics/gpu_device.hpp
+	src/Graphics/graphics/gpu_enum.hpp
+	src/Graphics/graphics/gpu_profiler.cpp
+	src/Graphics/graphics/gpu_profiler.hpp
+	src/Graphics/graphics/gpu_resource.cpp
+	src/Graphics/graphics/gpu_resource.hpp
+	src/Graphics/graphics/obj_scene.cpp
+	src/Graphics/graphics/obj_scene.hpp
+	src/Graphics/graphics/raptor_imgui.cpp
+	src/Graphics/graphics/raptor_imgui.hpp
+	src/Graphics/graphics/render_resources_loader.cpp
+	src/Graphics/graphics/render_resources_loader.hpp
+	src/Graphics/graphics/render_scene.cpp
+	src/Graphics/graphics/render_scene.hpp
+	src/Graphics/graphics/renderer.cpp
+	src/Graphics/graphics/renderer.hpp
+	src/Graphics/graphics/scene_graph.cpp
+	src/Graphics/graphics/scene_graph.hpp
+	src/Graphics/graphics/spriv_parser.cpp
+	src/Graphics/graphics/spriv_parser.hpp
+
+	src/Graphics/application/application.cpp
+	src/Graphics/application/application.hpp
+	src/Graphics/application/game_application.cpp
+	src/Graphics/application/game_application.hpp
+	src/Graphics/application/game_camera.cpp
+	src/Graphics/application/game_camera.hpp
+	src/Graphics/application/input.cpp
+	src/Graphics/application/input.hpp
+	src/Graphics/application/key.cpp
+	src/Graphics/application/key.hpp
+	src/Graphics/application/window.cpp
+	src/Graphics/application/window.hpp
+
+	src/Graphics/foundation/array.hpp
+	src/Graphics/foundation/assert.cpp
+	src/Graphics/foundation/assert.hpp
+	src/Graphics/foundation/bit.cpp
+	src/Graphics/foundation/bit.hpp
+	src/Graphics/foundation/blob.hpp
+	src/Graphics/foundation/blob_serialization.cpp
+	src/Graphics/foundation/blob_serialization.hpp
+	src/Graphics/foundation/camera.cpp
+	src/Graphics/foundation/camera.hpp
+	src/Graphics/foundation/color.cpp
+	src/Graphics/foundation/color.hpp
+	src/Graphics/foundation/data_structures.cpp
+	src/Graphics/foundation/data_structures.hpp
+	src/Graphics/foundation/file.cpp
+	src/Graphics/foundation/file.hpp
+	src/Graphics/foundation/gltf.cpp
+	src/Graphics/foundation/gltf.hpp
+	src/Graphics/foundation/hash_map.hpp
+	src/Graphics/foundation/log.cpp
+	src/Graphics/foundation/log.hpp
+	src/Graphics/foundation/memory.cpp
+	src/Graphics/foundation/memory.hpp
+	src/Graphics/foundation/memory_utils.hpp
+	src/Graphics/foundation/numerics.cpp
+	src/Graphics/foundation/numerics.hpp
+	src/Graphics/foundation/platform.hpp
+	src/Graphics/foundation/process.cpp
+	src/Graphics/foundation/process.hpp
+	src/Graphics/foundation/relative_data_structures.hpp
+	src/Graphics/foundation/resource_manager.cpp
+	src/Graphics/foundation/resource_manager.hpp
+	src/Graphics/foundation/serialization.cpp
+	src/Graphics/foundation/serialization.hpp
+	src/Graphics/foundation/service.cpp
+	src/Graphics/foundation/service.hpp
+	src/Graphics/foundation/service_manager.cpp
+	src/Graphics/foundation/service_manager.hpp
+	src/Graphics/foundation/string.cpp
+	src/Graphics/foundation/string.hpp
+	src/Graphics/foundation/time.cpp
+	src/Graphics/foundation/time.hpp
+	src/Graphics/foundation/windows_declarations.h
+
+	src/Graphics/shaders/culling.h
+	src/Graphics/shaders/ddgi.h
+	src/Graphics/shaders/debug_rendering.h
+	src/Graphics/shaders/lighting.h
+	src/Graphics/shaders/mesh.h
+	src/Graphics/shaders/meshlet.h
+	src/Graphics/shaders/platform.h
+	src/Graphics/shaders/scene.h
 
         src/Interaction/Helpers/MathHelpers.h
         src/Interaction/Helpers/MathHelpers.cpp
@@ -77,14 +183,5 @@ add_executable(DreamerEpicCycle WIN32
 
         src/Main/main.cpp
 )
-
-target_compile_options(DreamerEpicCycle PRIVATE -DUNICODE -DENGINE_DLL)
-
-target_link_libraries(${PROJECT_NAME} PRIVATE
-Diligent-GraphicsEngineD3D11-shared
-Diligent-GraphicsEngineD3D12-shared
-Diligent-GraphicsEngineVk-shared)
-
-copy_required_dlls(DreamerEpicCycle)
 
 
