@@ -5,17 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(DreamerEpicCycle/src)
 include_directories(DreamerEpicCycle/third-party)
-add_subdirectory(third_party/flecs/flecs-components-cglm)
-add_subdirectory(third_party/flecs/flecs-components-geometry)
-add_subdirectory(third_party/flecs/flecs-components-graphics)
-add_subdirectory(third_party/flecs/flecs-components-gui)
-add_subdirectory(third_party/flecs/flecs-components-input)
-add_subdirectory(third_party/flecs/flecs-components-physics)
-add_subdirectory(third_party/flecs/flecs-components-transform)
-add_subdirectory(third_party/flecs/flecs-game)
-add_subdirectory(third_party/flecs/flecs-systems-physics)
-add_subdirectory(third_party/flecs/flecs-systems-transform)
-
+add_subdirectory(DreamerEpicCycle/third-party)
 
 add_executable(DreamerEpicCycle WIN32
 

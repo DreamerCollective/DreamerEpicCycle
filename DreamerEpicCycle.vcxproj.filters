@@ -61,7 +61,6 @@
     <ClCompile Include="C:\DreamerCollectiveProjects\DreamerEpicCycle\src\Main\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Graphics\raptor\application\application.cpp" />
     <ClCompile Include="src\Graphics\raptor\application\game_application.cpp" />
     <ClCompile Include="src\Graphics\raptor\application\game_camera.cpp" />
     <ClCompile Include="src\Graphics\raptor\application\input.cpp" />
@@ -100,6 +99,9 @@
     <ClCompile Include="src\Graphics\graphics\scene_graph.cpp" />
     <ClCompile Include="src\Graphics\graphics\spirv_parser.cpp" />
     <ClCompile Include="src\Graphics\graphics_engine.cpp" />
+    <ClCompile Include="src\Graphics\raptor\application\application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\DreamerCollectiveProjects\DreamerEpicCycle\src\Interaction\Helpers\MathHelpers.h">
