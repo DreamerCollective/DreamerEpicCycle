@@ -6,13 +6,13 @@
 #include "kernel/log.hpp"
 #include "kernel/time.hpp"
 
-#include "application/window.hpp"
-#include "application/input.hpp"
-#include "application/raptor_imgui.hpp"
+#include "../application/window.hpp"
+#include "../application/input.hpp"
+#include "../application/raptor_imgui.hpp"
 
-#include "graphics/gpu_device.hpp"
-#include "graphics/renderer.hpp"
-#include "graphics/command_buffer.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/renderer.hpp"
+#include "../graphics/command_buffer.hpp"
 
 #include "cglm/util.h"
 

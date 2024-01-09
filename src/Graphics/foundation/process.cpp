@@ -2,8 +2,8 @@
 #include "assert.hpp"
 #include "log.hpp"
 
-#include "foundation/memory.hpp"
-#include "foundation/string.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/string.hpp"
 
 #include <stdio.h>
 

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/platform.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/platform.hpp"
 
-#include "graphics/gpu_enum.hpp"
+#include "../graphics/gpu_enum.hpp"
 
-#include <vulkan/vulkan_core.h>
+#include "../../VulkanSDK/Include/vulkan/vulkan_core.h"
 
 VK_DEFINE_HANDLE( VmaAllocation )
 struct VmaBudget;

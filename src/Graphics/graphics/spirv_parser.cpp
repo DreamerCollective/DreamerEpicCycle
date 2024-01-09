@@ -1,11 +1,11 @@
-#include "graphics/spirv_parser.hpp"
+#include "../graphics/spirv_parser.hpp"
 
-#include "foundation/numerics.hpp"
-#include "foundation/string.hpp"
+#include "../foundation/numerics.hpp"
+#include "../foundation/string.hpp"
 
 #include <cstdlib>
 #include <string.h>
-#include <vulkan/vulkan.h>
+#include "../../VulkanSDK/Include/vulkan/vulkan.h"
 
 namespace raptor {
 namespace spirv {

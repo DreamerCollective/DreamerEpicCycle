@@ -1,17 +1,17 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/platform.hpp"
-#include "foundation/color.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/platform.hpp"
+#include "../foundation/color.hpp"
 
-#include "graphics/command_buffer.hpp"
-#include "graphics/renderer.hpp"
-#include "graphics/gpu_resources.hpp"
-#include "graphics/frame_graph.hpp"
+#include "../graphics/command_buffer.hpp"
+#include "../graphics/renderer.hpp"
+#include "../graphics/gpu_resources.hpp"
+#include "../graphics/frame_graph.hpp"
 
-#include "external/cglm/types-struct.h"
+#include "../../third_party/cglm/include/cglm/types-struct.h"
 
-#include "external/enkiTS/TaskScheduler.h"
+#include "../../third_party/enkiTS/src/TaskScheduler.h"
 
 #include <atomic>
 

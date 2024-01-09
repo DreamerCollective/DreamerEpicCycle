@@ -1,13 +1,13 @@
 #include "gpu_profiler.hpp"
 
-#include "foundation/hash_map.hpp"
-#include "foundation/numerics.hpp"
-#include "foundation/color.hpp"
+#include "../foundation/hash_map.hpp"
+#include "../foundation/numerics.hpp"
+#include "../foundation/color.hpp"
 
-#include "graphics/renderer.hpp"
-#include "graphics/raptor_imgui.hpp"
+#include "../graphics/renderer.hpp"
+#include "../graphics/raptor_imgui.hpp"
 
-#include "external/imgui/imgui.h"
+#include "../../third_party/imgui/imgui.h"
 #include <cmath>
 #include <stdio.h>
 

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/data_structures.hpp"
-#include "foundation/hash_map.hpp"
-#include "foundation/service.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/data_structures.hpp"
+#include "../foundation/hash_map.hpp"
+#include "../foundation/service.hpp"
 
-#include "graphics/gpu_resources.hpp"
+#include "../graphics/gpu_resources.hpp"
 
 namespace raptor {
 

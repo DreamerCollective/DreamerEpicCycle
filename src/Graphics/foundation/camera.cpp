@@ -1,9 +1,9 @@
-#include "foundation/camera.hpp"
+#include "../foundation/camera.hpp"
 
-#include "external/cglm/struct/cam.h"
-#include "external/cglm/struct/affine.h"
-#include "external/cglm/struct/quat.h"
-#include "external/cglm/struct/project.h"
+#include "../../third_party/cglm/include/cglm/struct/cam.h"
+#include "../../third_party/cglm/include/cglm/struct/affine.h"
+#include "../../third_party/cglm/include/cglm/struct/quat.h"
+#include "../../third_party/cglm/include/cglm/struct/project.h"
 
 namespace raptor {
 

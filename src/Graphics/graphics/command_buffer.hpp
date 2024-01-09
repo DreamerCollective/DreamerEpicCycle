@@ -1,6 +1,6 @@
 #pragma once
 
-#include "graphics/gpu_device.hpp"
+#include "../graphics/gpu_device.hpp"
 
 namespace raptor {
 

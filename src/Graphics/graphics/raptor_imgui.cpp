@@ -1,14 +1,14 @@
 
 #include "raptor_imgui.hpp"
 
-#include "foundation/hash_map.hpp"
-#include "foundation/memory.hpp"
+#include "../foundation/hash_map.hpp"
+#include "../foundation/memory.hpp"
 
-#include "graphics/gpu_device.hpp"
-#include "graphics/command_buffer.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/command_buffer.hpp"
 
-#include "external/imgui/imgui.h"
-#include "external/imgui/imgui_impl_sdl.h"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/imgui/imgui_impl_sdl.h"
 
 #include <stdio.h>
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/string.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/string.hpp"
 
-#include "application/keys.hpp"
+#include "../application/keys.hpp"
 
 namespace raptor {
 

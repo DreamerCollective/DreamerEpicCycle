@@ -1,23 +1,23 @@
-#include "graphics/gltf_scene.hpp"
-#include "graphics/gpu_profiler.hpp"
-#include "graphics/raptor_imgui.hpp"
-#include "graphics/asynchronous_loader.hpp"
-#include "graphics/scene_graph.hpp"
+#include "../graphics/gltf_scene.hpp"
+#include "../graphics/gpu_profiler.hpp"
+#include "../graphics/raptor_imgui.hpp"
+#include "../graphics/asynchronous_loader.hpp"
+#include "../graphics/scene_graph.hpp"
 
-#include "foundation/file.hpp"
-#include "foundation/time.hpp"
-#include "foundation/numerics.hpp"
+#include "../foundation/file.hpp"
+#include "../foundation/time.hpp"
+#include "../foundation/numerics.hpp"
 
-#include "external/imgui/imgui.h"
-#include "external/stb_image.h"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/stb_image.h"
 
-#include "external/cglm/struct/affine.h"
-#include "external/cglm/struct/mat4.h"
-#include "external/cglm/struct/vec3.h"
-#include "external/cglm/struct/quat.h"
+#include "../../third_party/cglm/include/cglm/struct/affine.h"
+#include "../../third_party/cglm/include/cglm/struct/mat4.h"
+#include "../../third_party/cglm/include/cglm/struct/vec3.h"
+#include "../../third_party/cglm/include/cglm/struct/quat.h"
 
-#include "external/tracy/tracy/Tracy.hpp"
-#include "external/meshoptimizer/meshoptimizer.h"
+#include "../../third_party/tracy/tracy/Tracy.hpp"
+#include "../../third_party/meshoptimizer/src/meshoptimizer.h"
 
 namespace raptor {
 

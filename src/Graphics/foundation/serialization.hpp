@@ -1,7 +1,7 @@
 #pragma once
 
-#include "foundation/platform.hpp"
-#include "foundation/file.hpp"
+#include "../foundation/platform.hpp"
+#include "../../third_party/cglm/include/cglm/struct.h"
 
 namespace raptor {
 

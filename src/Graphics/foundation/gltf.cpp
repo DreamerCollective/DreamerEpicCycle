@@ -1,6 +1,6 @@
 #include "gltf.hpp"
 
-#include "external/json.hpp"
+#include "../../third_party/json.hpp"
 
 #include "assert.hpp"
 #include "file.hpp"

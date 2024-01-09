@@ -1,17 +1,18 @@
 cmake_minimum_required(VERSION 3.25.3)
 project(DreamerEpicCycle)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(Vulkan REQUIRED)
+include_directories(${Vulkan_INCLUDE_DIRS})
+
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
 
 include_directories(DreamerEpicCycle/src)
-include_directories(DreamerEpicCycle/third-party)
-add_subdirectory(DreamerEpicCycle/third-party)
+add_subdirectory(third_party)
 
 add_executable(DreamerEpicCycle WIN32
-
-	
-
-       	src/Graphics/engine.cpp
 
 	src/Graphics/graphics/asynchronous_loader.cpp
 	src/Graphics/graphics/asynchronous_loader.hpp
@@ -26,8 +27,8 @@ add_executable(DreamerEpicCycle WIN32
 	src/Graphics/graphics/gpu_enum.hpp
 	src/Graphics/graphics/gpu_profiler.cpp
 	src/Graphics/graphics/gpu_profiler.hpp
-	src/Graphics/graphics/gpu_resource.cpp
-	src/Graphics/graphics/gpu_resource.hpp
+	src/Graphics/graphics/gpu_resources.cpp
+	src/Graphics/graphics/gpu_resources.hpp
 	src/Graphics/graphics/obj_scene.cpp
 	src/Graphics/graphics/obj_scene.hpp
 	src/Graphics/graphics/raptor_imgui.cpp
@@ -40,8 +41,8 @@ add_executable(DreamerEpicCycle WIN32
 	src/Graphics/graphics/renderer.hpp
 	src/Graphics/graphics/scene_graph.cpp
 	src/Graphics/graphics/scene_graph.hpp
-	src/Graphics/graphics/spriv_parser.cpp
-	src/Graphics/graphics/spriv_parser.hpp
+	src/Graphics/graphics/spirv_parser.cpp
+	src/Graphics/graphics/spirv_parser.hpp
 
 	src/Graphics/application/application.cpp
 	src/Graphics/application/application.hpp
@@ -51,8 +52,8 @@ add_executable(DreamerEpicCycle WIN32
 	src/Graphics/application/game_camera.hpp
 	src/Graphics/application/input.cpp
 	src/Graphics/application/input.hpp
-	src/Graphics/application/key.cpp
-	src/Graphics/application/key.hpp
+	src/Graphics/application/keys.cpp
+	src/Graphics/application/keys.hpp
 	src/Graphics/application/window.cpp
 	src/Graphics/application/window.hpp
 
@@ -171,7 +172,5 @@ add_executable(DreamerEpicCycle WIN32
         src/Interaction/Items/ItemGeneration/ItemGenerationStatCompile.h
         src/Interaction/Items/ItemGeneration/ItemGenerationModule.h
 
-        src/Main/main.cpp
+        src/main.cpp
 )
-
-

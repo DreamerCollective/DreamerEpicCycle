@@ -1,10 +1,10 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "graphics/gpu_resources.hpp"
+#include "../foundation/array.hpp"
+#include "../graphics/gpu_resources.hpp"
 
 #if defined(_MSC_VER)
-#include <spirv-headers/spirv.h>
+#include "../../VulkanSDK/Include/spirv-headers/spirv.h"
 #else
 #include <spirv_cross/spirv.h>
 #endif

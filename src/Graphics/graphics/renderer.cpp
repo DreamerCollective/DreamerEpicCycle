@@ -1,13 +1,13 @@
 
-#include "graphics/renderer.hpp"
+#include "../graphics/renderer.hpp"
 
-#include "graphics/command_buffer.hpp"
+#include "../graphics/command_buffer.hpp"
 
-#include "foundation/memory.hpp"
-#include "foundation/file.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/file.hpp"
 
-#include "external/imgui/imgui.h"
-#include "external/vk_mem_alloc.h"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/vk_mem_alloc.h"
 
 #include <mutex>
 

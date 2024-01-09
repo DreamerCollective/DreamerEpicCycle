@@ -5,12 +5,12 @@
 #define WIN32_LEAN_AND_MEAN
 #endif
 
-#include "foundation/windows_declarations.h"
+#include "../foundation/windows_declarations.h"
 
-#include <vulkan/vk_platform.h>
-#include <vulkan/vulkan_core.h>
+#include "../../VulkanSDK/Include/vulkan/vk_platform.h"
+#include "../../VulkanSDK/Include/vulkan/vulkan_core.h"
 
-#include <vulkan/vulkan_win32.h>
+#include "../../VulkanSDK/Include/vulkan/vulkan_win32.h"
 
 #define VK_USE_PLATFORM_WIN32_KHR
 #else
@@ -20,12 +20,12 @@
 
 VK_DEFINE_HANDLE( VmaAllocator )
 
-#include "graphics/gpu_resources.hpp"
+#include "../graphics/gpu_resources.hpp"
 
-#include "foundation/data_structures.hpp"
-#include "foundation/string.hpp"
-#include "foundation/service.hpp"
-#include "foundation/array.hpp"
+#include "../foundation/data_structures.hpp"
+#include "../foundation/string.hpp"
+#include "../foundation/service.hpp"
+#include "../foundation/array.hpp"
 
 namespace raptor {
 

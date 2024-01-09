@@ -1,7 +1,7 @@
 #pragma once
 
-#include "foundation/memory.hpp"
-#include "graphics/gpu_device.hpp"
+#include "../foundation/memory.hpp"
+#include "../graphics/gpu_device.hpp"
 
 namespace raptor {
 

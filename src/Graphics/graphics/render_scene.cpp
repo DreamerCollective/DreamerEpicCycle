@@ -1,35 +1,35 @@
-#include "graphics/render_scene.hpp"
-#include "graphics/renderer.hpp"
-#include "graphics/scene_graph.hpp"
-#include "graphics/asynchronous_loader.hpp"
-#include "graphics/raptor_imgui.hpp"
-#include "graphics/gpu_profiler.hpp"
+#include "../graphics/render_scene.hpp"
+#include "../graphics/renderer.hpp"
+#include "../graphics/scene_graph.hpp"
+#include "../graphics/asynchronous_loader.hpp"
+#include "../graphics/raptor_imgui.hpp"
+#include "../graphics/gpu_profiler.hpp"
 
-#include "foundation/time.hpp"
-#include "foundation/numerics.hpp"
+#include "../foundation/time.hpp"
+#include "../foundation/numerics.hpp"
 
-#include "application/game_camera.hpp"
+#include "../application/game_camera.hpp"
 
-#include "external/imgui/imgui.h"
-#include "external/stb_image.h"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/stb_image.h"
 
-#include "external/cglm/struct/affine.h"
-#include "external/cglm/struct/mat4.h"
-#include "external/cglm/struct/vec3.h"
-#include "external/cglm/struct/quat.h"
+#include "../../third_party/cglm/include/cglm/struct/affine.h"
+#include "../../third_party/cglm/include/cglm/struct/mat4.h"
+#include "../../third_party/cglm/include/cglm/struct/vec3.h"
+#include "../../third_party/cglm/include/cglm/struct/quat.h"
 
-#include "external/cglm/struct/vec2.h"
-#include "external/cglm/struct/mat2.h"
-#include "external/cglm/struct/mat3.h"
-#include "external/cglm/struct/cam.h"
-#include "external/cglm/struct/euler.h"
+#include "../../third_party/cglm/include/cglm/struct/vec2.h"
+#include "../../third_party/cglm/include/cglm/struct/mat2.h"
+#include "../../third_party/cglm/include/cglm/struct/mat3.h"
+#include "../../third_party/cglm/include/cglm/struct/cam.h"
+#include "../../third_party/cglm/include/cglm/struct/euler.h"
 
-#include "external/stb_image.h"
-#include "external/tracy/tracy/Tracy.hpp"
+#include "../../third_party/stb_image.h"
+#include "../../third_party/tracy/tracy/Tracy.hpp"
 
-#include <assimp/cimport.h>
-#include <assimp/scene.h>
-#include <assimp/postprocess.h>
+#include "../../third_party/assimp/include/assimp/cimport.h"
+#include "../../third_party/assimp/include/assimp/scene.h"
+#include "../../third_party/assimp/include/assimp/postprocess.h"
 
 #define DEBUG_DRAW_MESHLET_SPHERES 0
 #define DEBUG_DRAW_MESHLET_CONES 0

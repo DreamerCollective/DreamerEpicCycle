@@ -2,7 +2,7 @@
 
 #include "gpu_device.hpp"
 
-#include "foundation/assert.hpp"
+#include "../foundation/assert.hpp"
 
 #include <string.h>
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "foundation/service.hpp"
-#include "foundation/array.hpp"
+#include "../foundation/service.hpp"
+#include "../foundation/array.hpp"
 
 namespace raptor {
 

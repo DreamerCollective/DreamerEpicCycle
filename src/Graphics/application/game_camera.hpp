@@ -1,8 +1,8 @@
 #pragma once
 
-#include "foundation/camera.hpp"
-#include "application/keys.hpp"
-#include "application/input.hpp"
+#include "../foundation/camera.hpp"
+#include "../application/keys.hpp"
+#include "../application/input.hpp"
 
 namespace raptor {
 

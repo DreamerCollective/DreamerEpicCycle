@@ -1,6 +1,6 @@
 #pragma once
 
-#include "foundation/platform.hpp"
+#include "../foundation/platform.hpp"
 
 #if !defined(_MSC_VER)
 // NOTE(marco): avoid conflicts with X header...

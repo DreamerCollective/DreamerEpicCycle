@@ -1,9 +1,9 @@
-#include "graphics/scene_graph.hpp"
+#include "../graphics/scene_graph.hpp"
 
-#include "foundation/numerics.hpp"
-#include "foundation/time.hpp"
+#include "../foundation/numerics.hpp"
+#include "../foundation/time.hpp"
 
-#include "external/cglm/struct/affine.h"
+#include "../../third_party/cglm/include/cglm/struct/affine.h"
 
 #include <string.h>
 

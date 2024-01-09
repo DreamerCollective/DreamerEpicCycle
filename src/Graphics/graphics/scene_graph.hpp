@@ -1,9 +1,9 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/bit.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/bit.hpp"
 
-#include "external/cglm/struct/mat4.h"
+#include "../../third_party/cglm/include/cglm/struct/mat4.h"
 
 namespace raptor {
 

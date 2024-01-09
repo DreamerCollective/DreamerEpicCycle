@@ -1,8 +1,8 @@
 #include "file.hpp"
 
-#include "foundation/memory.hpp"
-#include "foundation/assert.hpp"
-#include "foundation/string.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/assert.hpp"
+#include "../foundation/string.hpp"
 
 #if defined(_WIN64)
 #include <windows.h>

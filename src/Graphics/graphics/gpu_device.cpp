@@ -1,20 +1,20 @@
-#include "graphics/gpu_device.hpp"
-#include "graphics/command_buffer.hpp"
-#include "graphics/gpu_profiler.hpp"
-#include "graphics/spirv_parser.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/command_buffer.hpp"
+#include "../graphics/gpu_profiler.hpp"
+#include "../graphics/spirv_parser.hpp"
 
-#include "foundation/memory.hpp"
-#include "foundation/hash_map.hpp"
-#include "foundation/process.hpp"
-#include "foundation/file.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/hash_map.hpp"
+#include "../foundation/process.hpp"
+#include "../foundation/file.hpp"
 
 #if defined(_MSC_VER)
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #endif
 
-#include <vulkan/vk_enum_string_helper.h>
-#include "external/vk_mem_alloc.h"
+#include "../../VulkanSDK/Include/vulkan/vk_enum_string_helper.h"
+#include "../../third_party/vk_mem_alloc.h"
 
 template<class T>
 constexpr const T& raptor_min( const T& a, const T& b ) {
@@ -51,7 +51,7 @@ constexpr const T& raptor_max( const T& a, const T& b ) {
 //#define VMA_DEBUG_LOG rprintret
 
 #define VMA_IMPLEMENTATION
-#include "external/vk_mem_alloc.h"
+#include "../../third_party/vk_mem_alloc.h"
 
 // SDL and Vulkan headers
 #include <SDL.h>

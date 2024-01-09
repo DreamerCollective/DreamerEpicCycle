@@ -2,13 +2,13 @@
 #include "memory_utils.hpp"
 #include "assert.hpp"
 
-#include "external/tlsf.h"
+#include "../../third_party/tlsf.h"
 
 #include <stdlib.h>
 #include <memory.h>
 
 #if defined RAPTOR_IMGUI
-#include "external/imgui/imgui.h"
+#include "../../third_party/imgui/imgui.h"
 #endif // RAPTOR_IMGUI
 
 // Define this and add StackWalker to heavy memory profile

@@ -1,17 +1,17 @@
 #include "frame_graph.hpp"
 
-#include "foundation/file.hpp"
-#include "foundation/memory.hpp"
-#include "foundation/string.hpp"
+#include "../foundation/file.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/string.hpp"
 
-#include "graphics/command_buffer.hpp"
-#include "graphics/gpu_device.hpp"
-#include "graphics/gpu_resources.hpp"
-#include "graphics/render_scene.hpp"
+#include "../graphics/command_buffer.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/gpu_resources.hpp"
+#include "../graphics/render_scene.hpp"
 
-#include "external/json.hpp"
-#include "external/imgui/imgui.h"
-#include "external/tracy/tracy/Tracy.hpp"
+#include "../../third_party/json.hpp"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/tracy/tracy/Tracy.hpp"
 
 #include <string>
 

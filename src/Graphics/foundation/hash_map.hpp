@@ -1,10 +1,10 @@
 #pragma once
 
-#include "foundation/memory.hpp"
-#include "foundation/assert.hpp"
-#include "foundation/bit.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/assert.hpp"
+#include "../foundation/bit.hpp"
 
-#include "external/wyhash.h"
+#include "../../third_party/wyhash.h"
 
 namespace raptor {
 

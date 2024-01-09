@@ -1,6 +1,6 @@
 #pragma once
 
-#include "foundation/platform.hpp"
+#include "../foundation/platform.hpp"
 #include <stdio.h>
 
 namespace raptor {

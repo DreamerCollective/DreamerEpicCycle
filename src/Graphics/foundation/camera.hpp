@@ -1,8 +1,8 @@
 #pragma once
 
-#include "foundation/platform.hpp"
+#include "../foundation/platform.hpp"
 
-#include "external/cglm/struct/mat4.h"
+#include "../../third_party/cglm/include/cglm/struct/mat4.h"
 
 namespace raptor {
 

@@ -1,13 +1,13 @@
-#include "graphics/render_resources_loader.hpp"
-#include "graphics/frame_graph.hpp"
+#include "../graphics/render_resources_loader.hpp"
+#include "../graphics/frame_graph.hpp"
 
-#include "foundation/file.hpp"
-#include "foundation/time.hpp"
+#include "../foundation/file.hpp"
+#include "../foundation/time.hpp"
 
-#include "external/json.hpp"
+#include "../../third_party/json.hpp"
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "external/stb_image.h"
+#include "../../third_party/stb_image.h"
 
 namespace raptor {
 

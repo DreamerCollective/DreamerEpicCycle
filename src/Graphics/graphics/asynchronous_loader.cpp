@@ -1,11 +1,11 @@
-#include "graphics/asynchronous_loader.hpp"
-#include "graphics/renderer.hpp"
+#include "../graphics/asynchronous_loader.hpp"
+#include "../graphics/renderer.hpp"
 
-#include "foundation/time.hpp"
+#include "../foundation/time.hpp"
 
-#include "external/stb_image.h"
+#include "../../third_party/stb_image.h"
 
-#include "external/tracy/tracy/Tracy.hpp"
+#include "../../third_party/tracy/tracy/Tracy.hpp"
 
 namespace raptor
 {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "graphics/gpu_resources.hpp"
-#include "graphics/render_scene.hpp"
-#include "graphics/renderer.hpp"
+#include "../graphics/gpu_resources.hpp"
+#include "../graphics/render_scene.hpp"
+#include "../graphics/renderer.hpp"
 
 struct aiScene;
 

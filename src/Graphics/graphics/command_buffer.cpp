@@ -1,11 +1,11 @@
-#include "graphics/command_buffer.hpp"
-#include "graphics/gpu_device.hpp"
-#include "graphics/gpu_profiler.hpp"
+#include "../graphics/command_buffer.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/gpu_profiler.hpp"
 
-#include "foundation/memory.hpp"
-#include "foundation/numerics.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/numerics.hpp"
 
-#include "external/tracy/tracy/Tracy.hpp"
+#include "../../third_party/tracy/tracy/Tracy.hpp"
 
 #if defined(_MSC_VER)
 #define WIN32_LEAN_AND_MEAN

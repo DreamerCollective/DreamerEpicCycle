@@ -1,13 +1,13 @@
 #include "window.hpp"
 
-#include "foundation/log.hpp"
-#include "foundation/numerics.hpp"
+#include "../foundation/log.hpp"
+#include "../foundation/numerics.hpp"
 
 #include <SDL.h>
 #include <SDL_vulkan.h>
 
-#include "external/imgui/imgui.h"
-#include "external/imgui/imgui_impl_sdl.h"
+#include "../../third_party/imgui/imgui.h"
+#include "../../third_party/imgui/imgui_impl_sdl.h"
 
 static SDL_Window* window = nullptr;
 

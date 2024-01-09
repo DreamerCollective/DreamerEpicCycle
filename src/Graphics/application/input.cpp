@@ -1,8 +1,8 @@
 
 #include "input.hpp"
 
-#include "foundation/assert.hpp"
-#include "external/imgui/imgui.h"
+#include "../foundation/assert.hpp"
+#include "../../third_party/imgui/imgui.h"
 
 #include <cmath>
 

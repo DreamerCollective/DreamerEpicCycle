@@ -3,8 +3,8 @@
 #include <cmath>
 #include <stdlib.h>
 
-#include "foundation/assert.hpp"
-#include "foundation/log.hpp"
+#include "../foundation/assert.hpp"
+#include "../foundation/log.hpp"
 
 namespace raptor {
 #if defined (RAPTOR_MATH_OVERFLOW_CHECK)

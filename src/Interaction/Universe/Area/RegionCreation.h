@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include "flecs/flecs.h"
+#include "../../third_party/flecs/flecs/flecs.h"
 #include "RegionComponents.h"
 
 struct RegionCreation

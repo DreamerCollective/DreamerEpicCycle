@@ -1,7 +1,7 @@
 #pragma once
 
-#include "foundation/memory.hpp"
-#include "foundation/assert.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/assert.hpp"
 
 namespace raptor {
 

@@ -1,11 +1,11 @@
 #include "game_camera.hpp"
 
-#include "foundation/platform.hpp"
-#include "foundation/numerics.hpp"
+#include "../foundation/platform.hpp"
+#include "../foundation/numerics.hpp"
 
-#include "external/cglm/struct/affine.h"
-#include "external/cglm/struct/cam.h"
-#include "external/imgui/imgui.h"
+#include "../../third_party/cglm/include/cglm/struct/affine.h"
+#include "../../third_party/cglm/include/cglm/struct/cam.h"
+#include "../../third_party/imgui/imgui.h"
 
 namespace raptor {
 

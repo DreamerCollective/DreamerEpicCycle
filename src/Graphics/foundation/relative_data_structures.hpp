@@ -1,9 +1,9 @@
 #pragma once
 
-#include "foundation/platform.hpp"
-#include "foundation/memory.hpp"
-#include "foundation/assert.hpp"
-#include "foundation/array.hpp"
+#include "../foundation/platform.hpp"
+#include "../foundation/memory.hpp"
+#include "../foundation/assert.hpp"
+#include "../foundation/array.hpp"
 
 // Defines:
 // RAPTOR_BLOB_WRITE         - use it in code that can write blueprints,

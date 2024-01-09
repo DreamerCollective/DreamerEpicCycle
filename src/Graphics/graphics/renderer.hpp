@@ -1,9 +1,9 @@
 #pragma once
 
-#include "graphics/gpu_device.hpp"
-#include "graphics/gpu_resources.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/gpu_resources.hpp"
 
-#include "foundation/resource_manager.hpp"
+#include "../foundation/resource_manager.hpp"
 
 namespace raptor {
 

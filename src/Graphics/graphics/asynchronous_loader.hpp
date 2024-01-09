@@ -1,13 +1,13 @@
 #pragma once
 
-#include "foundation/array.hpp"
-#include "foundation/platform.hpp"
+#include "../foundation/array.hpp"
+#include "../foundation/platform.hpp"
 
-#include "graphics/command_buffer.hpp"
-#include "graphics/gpu_device.hpp"
-#include "graphics/gpu_resources.hpp"
+#include "../graphics/command_buffer.hpp"
+#include "../graphics/gpu_device.hpp"
+#include "../graphics/gpu_resources.hpp"
 
-#include "external/cglm/types-struct.h"
+#include "../../third_party/cglm/include/cglm/types-struct.h"
 
 #include <atomic>
 
