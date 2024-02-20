@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Helpers\MathHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\Characters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxySystems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneCreation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkCreation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Command\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationSeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationRarity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationQuality.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationManufacturer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationAffixes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationParts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationTags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStatCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Helpers\MathHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\Characters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\CharacterComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxyComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxyComponentConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxySystems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\RegionComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\RegionCreation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\VoxelComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneCreation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkCreation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Civilisation\CivilisationModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Civilisation\CivilisationComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Command\UnitComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfigComponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfigModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationSeed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationRarity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationQuality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationManufacturer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationAffixes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationParts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationTags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStatCompile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FEB7D235-A44B-374E-9E28-382ACD861807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4EF0158F-D8F6-325D-8B5C-77704FBE0A9D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

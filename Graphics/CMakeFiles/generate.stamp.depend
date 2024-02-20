@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/FeatureSummary.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindVulkan.cmake
+C:/SDK/SDL2-devel-2.28.4-VC/cmake/sdl2-config-version.cmake
+C:/SDK/SDL2-devel-2.28.4-VC/cmake/sdl2-config.cmake
+C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeLists.txt

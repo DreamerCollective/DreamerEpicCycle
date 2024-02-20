@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6CCC3DC7-D808-3E4A-9D23-BAD0C8C40CF8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Graphics</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Graphics.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Graphics</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Debug</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Graphics.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Graphics</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Release</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Graphics.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Graphics</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/MinSizeRel</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Graphics.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Graphics</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/RelWithDebInfo</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/SDK/VulkanSDK/Include" /external:I "C:/SDK/SDL2-devel-2.28.4-VC/cmake/../include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/SDK/SDL2-devel-2.28.4-VC/cmake/../lib/x64/SDL2.dll "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>third_party\Debug\vkbootstrap.lib;third_party\Debug\imgui.lib;third_party\fastgltf\Debug\fastgltf.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fmt\Debug\fmtd.lib;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\lib\x64\SDL2.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fastgltf\Debug\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Debug/Graphics.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Debug/Graphics.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/SDK/VulkanSDK/Include" /external:I "C:/SDK/SDL2-devel-2.28.4-VC/cmake/../include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/SDK/SDL2-devel-2.28.4-VC/cmake/../lib/x64/SDL2.dll "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Release"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>third_party\Release\vkbootstrap.lib;third_party\Release\imgui.lib;third_party\fastgltf\Release\fastgltf.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fmt\Release\fmt.lib;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\lib\x64\SDL2.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fastgltf\Release\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Release/Graphics.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Release/Graphics.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/SDK/VulkanSDK/Include" /external:I "C:/SDK/SDL2-devel-2.28.4-VC/cmake/../include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/SDK/SDL2-devel-2.28.4-VC/cmake/../lib/x64/SDL2.dll "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/MinSizeRel"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>third_party\MinSizeRel\vkbootstrap.lib;third_party\MinSizeRel\imgui.lib;third_party\fastgltf\MinSizeRel\fastgltf.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fmt\MinSizeRel\fmt.lib;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\lib\x64\SDL2.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fastgltf\MinSizeRel\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/MinSizeRel/Graphics.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/MinSizeRel/Graphics.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/SDK/VulkanSDK/Include" /external:I "C:/SDK/SDL2-devel-2.28.4-VC/cmake/../include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vma;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\glm;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\include;C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\stb_image;C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/SDK/SDL2-devel-2.28.4-VC/cmake/../lib/x64/SDL2.dll "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/RelWithDebInfo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>third_party\RelWithDebInfo\vkbootstrap.lib;third_party\RelWithDebInfo\imgui.lib;third_party\fastgltf\RelWithDebInfo\fastgltf.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fmt\RelWithDebInfo\fmt.lib;C:\SDK\SDL2-devel-2.28.4-VC\cmake\..\lib\x64\SDL2.lib;C:\SDK\VulkanSDK\Lib\vulkan-1.lib;third_party\fastgltf\RelWithDebInfo\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/RelWithDebInfo/Graphics.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/RelWithDebInfo/Graphics.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" "-BC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" --check-stamp-file "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindVulkan.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config-version.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" "-BC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" --check-stamp-file "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindVulkan.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config-version.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" "-BC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" --check-stamp-file "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindVulkan.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config-version.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" "-BC:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle" --check-stamp-file "C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindVulkan.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config-version.cmake;C:\SDK\SDL2-devel-2.28.4-VC\cmake\sdl2-config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/Graphics.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_types.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_initializers.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_initializers.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_images.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_images.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_descriptors.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_descriptors.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_pipelines.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_pipelines.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_engine.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_engine.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_loader.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_loader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\camera.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\camera.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\meshes.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\meshes.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/CMakeFiles/Graphics.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\ZERO_CHECK.vcxproj">
+      <Project>{A110BCB5-C2E2-3CCD-B922-8E81B3A26424}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\fastgltf.vcxproj">
+      <Project>{D5831069-E684-38BC-9B67-88785B71754D}</Project>
+      <Name>fastgltf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\fastgltf_simdjson.vcxproj">
+      <Project>{CD18375A-FFBF-38CB-9211-CBE4F0AA9B77}</Project>
+      <Name>fastgltf_simdjson</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fmt\fmt.vcxproj">
+      <Project>{B36130B7-43AB-38D0-AAE5-1327A81AE6F9}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui.vcxproj">
+      <Project>{D31F58B1-4687-3514-AFBF-82DCECD50F22}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap.vcxproj">
+      <Project>{F7CC7C21-37AC-3DAB-9D38-B96F702427E9}</Project>
+      <Name>vkbootstrap</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
