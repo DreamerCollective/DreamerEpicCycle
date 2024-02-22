@@ -37,3 +37,13 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/third_party/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/shared/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Graphics/src/cmake_install.cmake")
+endif()
+

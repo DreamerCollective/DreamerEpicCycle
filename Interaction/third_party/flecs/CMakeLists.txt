@@ -15,7 +15,7 @@ include_directories(flecs-game)
 include_directories(flecs-systems-physics)
 include_directories(flecs-systems-transform)
 
-add_executable(flecs WIN32
+add_executable(flecs
 	flecs/flecs.h
 	flecs/flecs.c
 	

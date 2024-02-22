@@ -173,10 +173,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\Graphics.vcxproj">
-      <Project>{6CCC3DC7-D808-3E4A-9D23-BAD0C8C40CF8}</Project>
-      <Name>Graphics</Name>
-    </ProjectReference>
     <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\fastgltf\fastgltf.vcxproj">
       <Project>{D5831069-E684-38BC-9B67-88785B71754D}</Project>
       <Name>fastgltf</Name>
@@ -188,6 +184,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\imgui.vcxproj">
       <Project>{D31F58B1-4687-3514-AFBF-82DCECD50F22}</Project>
       <Name>imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\shared\shared.vcxproj">
+      <Project>{47FE389D-B1E6-3264-A282-CFB13BB90814}</Project>
+      <Name>shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\src.vcxproj">
+      <Project>{66352FF3-E225-3F42-B373-21B8DC1D8A55}</Project>
+      <Name>src</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\vkbootstrap.vcxproj">
       <Project>{F7CC7C21-37AC-3DAB-9D38-B96F702427E9}</Project>

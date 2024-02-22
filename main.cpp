@@ -15,10 +15,12 @@
  * limitations under the License.
  */
 
+// everytime cmake recompiles insert this statement |v| into DreamerEpicCycle properties C/C++ include directories
+// C:\SDK\VulkanSDK\Include;C:\SDK\SDL2-devel-2.28.4-VC\include
  
 #include "Interaction/third_party/flecs/flecs/flecs.h"
-#include "Interaction/Items/ItemModule.h"
-#include "Graphics/vk_engine.h"
+#include "Interaction/src/Items/ItemModule.h"
+#include "Graphics/src/vk_engine.h"
 #include <iostream>
 
 
@@ -59,7 +61,6 @@ int main(int argc, char** argv)
          engine.run();
 
          engine.cleanup();
-         
      }
 
     return 0;

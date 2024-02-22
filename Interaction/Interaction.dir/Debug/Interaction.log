@@ -1,0 +1,35 @@
+﻿  Building Custom Rule C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/CMakeLists.txt
+  Characters.cpp
+  Unit.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Command\Unit.h(5,10): fatal  error C1083: Cannot open include file: '../../../third_party/flecs/flecs/flecs.h': No such file or directory
+  MathHelpers.cpp
+  ItemConfig.cpp
+  ItemGeneration.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGeneration.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationAffixes.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationAffixes.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationBase.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationBase.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationManufacturer.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationManufacturer.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationMaterial.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationMaterial.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationParts.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationParts.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationQuality.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationQuality.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationRarity.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationRarity.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationSeed.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationSeed.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationStatCompile.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStatCompile.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationStats.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStats.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ItemGenerationTags.cpp
+C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationTags.h(5,10): fatal  error C1083: Cannot open include file: '../../third_party/flecs/flecs/flecs.h': No such file or directory
+  ChunkCreation.cpp
+  RegionCreation.cpp
+  GalaxySystems.cpp
+  BioneCreation.cpp
+  Generating Code...

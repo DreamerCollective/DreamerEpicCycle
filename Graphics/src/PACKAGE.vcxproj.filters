@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\CMakeFiles\6bcac5b52ea1b9b3571085445f48ef6c\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EE220C20-B06E-321C-97D0-7885EF7D62E1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

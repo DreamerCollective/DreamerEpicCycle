@@ -4,57 +4,57 @@
     <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\cmake_pch.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_initializers.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_initializers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_images.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_images.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_descriptors.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_descriptors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_pipelines.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_pipelines.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_engine.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_loader.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\camera.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\meshes.cpp">
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\meshes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_types.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_initializers.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_initializers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_images.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_images.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_descriptors.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_descriptors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_pipelines.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_pipelines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_engine.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\vk_loader.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\vk_loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\camera.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\meshes.h">
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\src\meshes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\CMakeFiles\Graphics.dir\Debug\cmake_pch.hxx">

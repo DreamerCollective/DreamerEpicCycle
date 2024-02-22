@@ -91,7 +91,6 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -118,7 +117,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/Debug/Interaction.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/Debug/Interaction.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -129,7 +128,6 @@
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -158,7 +156,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/Release/Interaction.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/Release/Interaction.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -169,7 +167,6 @@
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -198,7 +195,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/MinSizeRel/Interaction.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/MinSizeRel/Interaction.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -210,7 +207,6 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -237,7 +233,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/RelWithDebInfo/Interaction.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/RelWithDebInfo/Interaction.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -301,59 +297,60 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Helpers\MathHelpers.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Helpers\MathHelpers.cpp" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\Characters.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\Characters.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Character\CharacterComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxyComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxyComponentConfig.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxySystems.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Galaxy\GalaxySystems.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\RegionComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\RegionCreation.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\VoxelComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneCreation.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\World\BioneCreation.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkCreation.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Universe\Area\ChunkCreation.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Civilisation\CivilisationModule.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Civilisation\CivilisationComponents.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Command\Unit.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Command\UnitComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemModule.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfig.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfig.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfigComponents.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemConfig\ItemConfigModule.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGeneration.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGeneration.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationSeed.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationSeed.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationBase.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationBase.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationRarity.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationRarity.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationQuality.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationQuality.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationMaterial.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationMaterial.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationManufacturer.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationManufacturer.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationAffixes.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationAffixes.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationParts.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationParts.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationTags.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationTags.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStats.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStats.h" />
-    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStatCompile.cpp" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationStatCompile.h" />
-    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\Items\ItemGeneration\ItemGenerationModule.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Character\CharacterComponents.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Character\Characters.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Character\Characters.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Civilisation\CivilisationComponents.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Civilisation\CivilisationModule.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Command\Unit.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Command\Unit.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Command\UnitComponents.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Helpers\MathHelpers.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Helpers\MathHelpers.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemComponents.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemModule.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemConfig\ItemConfig.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemConfig\ItemConfig.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemConfig\ItemConfigComponents.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemConfig\ItemConfigModule.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationModule.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGeneration.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGeneration.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationAffixes.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationAffixes.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationBase.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationBase.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationManufacturer.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationManufacturer.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationMaterial.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationMaterial.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationParts.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationParts.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationQuality.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationQuality.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationRarity.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationRarity.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationSeed.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationSeed.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStatCompile.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStatCompile.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStats.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationStats.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationTags.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Items\ItemGeneration\ItemGenerationTags.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\ChunkComponents.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\ChunkCreation.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\ChunkCreation.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\RegionCreation.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\RegionCreation.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Area\VoxelComponents.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Galaxy\GalaxyComponentConfig.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Galaxy\GalaxyComponents.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Galaxy\GalaxySystems.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\Galaxy\GalaxySystems.h" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\World\BioneComponents.h" />
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\World\BioneCreation.cpp" />
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\src\Universe\World\BioneCreation.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\ZERO_CHECK.vcxproj">

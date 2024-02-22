@@ -1,3 +1,5 @@
+cmake_minimum_required (VERSION 3.25)
+project(third_party)
 set(CMAKE_CXX_STANDARD 20)
 find_package(Vulkan REQUIRED)
 
@@ -19,7 +21,7 @@ target_include_directories(vkbootstrap PUBLIC vkbootstrap)
 target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_DL_LIBS}>)
 set_property(TARGET vkbootstrap PROPERTY CXX_STANDARD 20)
 
-#both vma and glm and header only libs so we only need the include path
+#both vma and glm are header only libs so we only need the include path
 target_include_directories(vma INTERFACE vma)
 
 target_include_directories(glm INTERFACE glm)

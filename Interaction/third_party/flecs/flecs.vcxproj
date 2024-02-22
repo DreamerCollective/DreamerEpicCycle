@@ -120,7 +120,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/Debug/flecs.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/Debug/flecs.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -162,7 +162,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/Release/flecs.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/Release/flecs.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -204,7 +204,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/MinSizeRel/flecs.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/MinSizeRel/flecs.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -245,7 +245,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/RelWithDebInfo/flecs.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/David Work/Desktop/DreamerCollectiveprojects/DreamerEpicCycle/Interaction/third_party/flecs/RelWithDebInfo/flecs.pdb</ProgramDataBaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>

@@ -195,7 +195,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Interaction\third_party\ALL_BUILD.vcxproj">
+    <ProjectReference Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\Graphics\third_party\ALL_BUILD.vcxproj">
       <Project>{04A2CF84-4B88-3439-887A-F747A002274B}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
