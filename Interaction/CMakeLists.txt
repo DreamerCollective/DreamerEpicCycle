@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.25.3)
-project(Interaction)
 
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(third_party)
+include_directories(third_party)
 
-add_executable(Interaction
+add_library(Interaction STATIC
 	src/Character/CharacterComponents.h
 	src/Character/Characters.cpp
 	src/Character/Characters.h
