@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\tlsf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_impl_sdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\TextEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\tracy\TracyClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\enkiTS\TaskScheduler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\clusterizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\indexcodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\indexgenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\overdrawanalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\overdrawoptimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\simplifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\spatialorder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\stripifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vcacheanalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vcacheoptimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vertexcodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vertexfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vfetchanalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\vfetchoptimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs\flecs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\src\camera_controller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\src\light_controller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\src\world_cells.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-transform\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\src\octree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\src\spatial_query.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-transform\src\transform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-physics\src\physics.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-cglm\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-geometry\src\geometry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-graphics\src\graphics.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-input\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-gui\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\StackWalker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_impl_sdl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui_memory_editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\imgui\TextEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\tracy\tracy\Tracy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\tracy\tracy\TracyVulkan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\enkiTS\LockLessMultiReadPipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\enkiTS\TaskScheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\meshoptimizer\meshoptimizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\Assimp\include\assimp\cimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\Assimp\include\assimp\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\Assimp\include\assimp\postprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs\flecs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\include\flecs_game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-game\include\flecs-game\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-transform\include\flecs_systems_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-transform\include\flecs-systems-transform\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\include\flecs_systems_physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\include\flecs-systems-physics\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\include\flecs-systems-physics\octree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-systems-physics\include\flecs-systems-physics\spatial_query.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-transform\include\flecs_components_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-transform\include\flecs-components-transform\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-physics\include\flecs_components_physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-physics\include\flecs-components-physics\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-cglm\include\flecs_components_cglm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-cglm\include\flecs-components-cglm\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-geometry\include\flecs_components_geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-geometry\include\flecs-components-geometry\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-graphics\include\flecs_components_graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-graphics\include\flecs-components-graphics\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-input\include\flecs_components_input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-input\include\flecs-components-input\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-gui\include\flecs_components_gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\source\external\flecs\flecs-components-gui\include\flecs-components-gui\bake_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David Work\Desktop\DreamerCollectiveprojects\DreamerEpicCycle\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{533BEFCE-697A-3704-AA92-F5317558B864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4554E662-4B8D-35C5-8274-DC31DD9FF661}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
