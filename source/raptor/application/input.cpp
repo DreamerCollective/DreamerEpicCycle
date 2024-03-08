@@ -9,7 +9,7 @@
 #define INPUT_BACKEND_SDL
 
 #if defined (INPUT_BACKEND_SDL)
-#include <../../../../SDK/SDL2-2.30.0/include/SDL.h>
+#include <SDL.h>
 #endif // INPUT_BACKEND_SDL
 
 namespace raptor {

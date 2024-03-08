@@ -3,8 +3,8 @@
 #include "foundation/log.hpp"
 #include "foundation/numerics.hpp"
 
-#include <../../../../SDK/SDL2-2.30.0/include/SDL.h>
-#include <../../../../SDK/SDL2-2.30.0/include/SDL_vulkan.h>
+#include <SDL.h>
+#include <SDL_vulkan.h>
 
 #include "external/imgui/imgui.h"
 #include "external/imgui/imgui_impl_sdl.h"

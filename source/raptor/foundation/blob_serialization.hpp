@@ -1,12 +1,12 @@
 #pragma once
 
-#include "platform.hpp"
-#include "memory.hpp"
-#include "assert.hpp"
-#include "array.hpp"
-#include "relative_data_structures.hpp"
+#include "foundation/platform.hpp"
+#include "foundation/memory.hpp"
+#include "foundation/assert.hpp"
+#include "foundation/array.hpp"
+#include "foundation/relative_data_structures.hpp"
 
-#include "blob.hpp"
+#include "foundation/blob.hpp"
 
 // Defines:
 // RAPTOR_BLOB_WRITE         - use it in code that can write blueprints,

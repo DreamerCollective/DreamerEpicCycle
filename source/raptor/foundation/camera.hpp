@@ -1,6 +1,6 @@
 #pragma once
 
-#include "platform.hpp"
+#include "foundation/platform.hpp"
 
 #include "external/cglm/struct/mat4.h"
 
