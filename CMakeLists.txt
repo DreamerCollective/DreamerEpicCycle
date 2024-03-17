@@ -180,18 +180,7 @@ endif()
 
 set_property(TARGET RaptorExternal PROPERTY CXX_STANDARD 17)
 
-add_subdirectory(source/chapter1)
-add_subdirectory(source/chapter2)
-add_subdirectory(source/chapter3)
-add_subdirectory(source/chapter4)
-add_subdirectory(source/chapter5)
-add_subdirectory(source/chapter6)
-add_subdirectory(source/chapter7)
-add_subdirectory(source/chapter8)
-add_subdirectory(source/chapter9)
-add_subdirectory(source/chapter10)
-add_subdirectory(source/chapter11)
-add_subdirectory(source/chapter12)
-add_subdirectory(source/chapter13)
-add_subdirectory(source/chapter14)
-add_subdirectory(source/chapter15)
+add_subdirectory(source/graphics)
+add_subdirectory(source/interaction)
+
+
