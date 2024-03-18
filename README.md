@@ -31,9 +31,3 @@ export VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d
 
 To generate the Make file, run the following command:
 `cmake -B build -DCMAKE_BUILD_TYPE=Debug`
-
-With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
-### Software and Hardware List
-| Chapter | Software required | OS required |
-| -------- | ------------------------------------ | ----------------------------------- |
-| 1-15 | Vulkan 1.2 | Windows or Linux |
