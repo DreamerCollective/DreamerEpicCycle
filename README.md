@@ -1,9 +1,6 @@
 # DreamerEpicCycle
 A game were you participate in and shape the events in a science fiction fantasy galaxy
 
-## Instructions and Navigations
-All of the code is organized into folders. For example, chapter2.
-
 The code has been tested with the following software:
 - Visual Studio 2019 Community Edition 16.11.8 (Windows)
 - gcc 9 (Linux)
