@@ -9,6 +9,7 @@ The code has been tested with the following software:
 - SDL version 2.0.18
 - assimp 5.2.2
 - vulkan 1.3.275.0
+
 To download the glTF assets using the bootstrap script, run the following command: `python ./bootstrap.py`
 
 Alternatively, you get manually download the models from https://github.com/KhronosGroup/glTF-Sample-Models. We tested only only a subset of glTF 2.0 models.
