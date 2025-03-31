@@ -564,12 +564,19 @@ namespace JitterType {
 } // namespace JitterType
 
 //
-//
+static const char* scene = "../../binaries/data/sphere.obj";
+
 int main( int argc, char** argv ) {
 
-    if ( argc < 2 ) {
-        printf( "Usage: chapter15 [path to glTF model]\n");
-        InjectDefault3DModel();
+    if (raptor::file_exists(scene)) {
+        
+            argc = 2; 
+            argv[1] = const_cast<char*>(scene); 
+    }
+    else {
+        
+            printf("Unable to find model. \n"); \
+            exit(-1); 
     }
 
     using namespace raptor;
@@ -596,7 +603,7 @@ int main( int argc, char** argv ) {
     task_scheduler.Initialize( config );
 
     // window
-    WindowConfiguration wconf{ 1280, 800, "Raptor Chapter 15: RT Reflections", &MemoryService::instance()->system_allocator};
+    WindowConfiguration wconf{ 1920, 1080, "Game", &MemoryService::instance()->system_allocator};
     raptor::Window window;
     window.init( &wconf );
 
@@ -782,6 +789,12 @@ int main( int argc, char** argv ) {
             if ( render_pass ) {
                 render_pass->output.reset().depth( VK_FORMAT_D16_UNORM, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL );
             }
+        }
+        else {
+            RenderPassCreation creation{};
+            creation.set_name("point_shadows_pass");
+            creation.set_depth_stencil_texture(VK_FORMAT_D16_UNORM, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL);
+            point_shadows_pass_node->render_pass = frame_graph.builder->device->create_render_pass(creation);
         }
 
         // Cache frame graph resources in scene
