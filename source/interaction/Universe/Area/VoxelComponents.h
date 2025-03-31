@@ -22,36 +22,31 @@
 #include "../../flecs/flecs/flecs.h"
 
 struct VoxelComponents
-{
-    struct VoxelPosition
+{  
+    struct VoxelMegametrePosition
     {
-        uint16_t xPosition;
-        uint16_t yPosition;
-        uint16_t zPosition;
+        uint32_t VoxelMegametrePositionBitArray;
+        uint8_t chunkState;
     };
 
-    struct VoxelType
+    struct VoxelKilometrePosition
     {
-        uint16_t voxelType;
+        uint32_t VoxelKilometrePositionBitArray;
+        uint8_t chunkState;
     };
 
-    struct VoxelCondition
+    struct VoxelMetrePosition
     {
-        uint8_t voxelCondition;
-    };
-
-    struct VoxelState
-    {
-        uint8_t voxelState;
+        uint32_t VoxelMeterPositionBitArray;
+        uint8_t chunkState;
     };
 
     explicit VoxelComponents(flecs::world& world)
     {
         world.module<VoxelComponents>();
 
-        world.component<VoxelPosition>();
-        world.component<VoxelType>();
-        world.component<VoxelCondition>();
-        world.component<VoxelState>();
+        world.component<VoxelMegametrePosition>();
+        world.component<VoxelKilometrePosition>();
+        world.component<VoxelMetrePosition>();
     }
 };
