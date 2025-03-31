@@ -4,16 +4,18 @@
 #include "platform.hpp"
 #include "string.hpp"
 
-static const char* kDefault3DModel = "../deps/src/glTF-Sample-Models/2.0/Sponza/glTF/Sponza.gltf";
+/*static const char* scene = "../deps/src/glTF-Sample-Models/2.0/Sponza/glTF/Sponza.gltf";
 
 #define InjectDefault3DModel() \
-    if (raptor::file_exists(kDefault3DModel)) {\
+    if (raptor::file_exists(scene)) {\
         argc = 2;\
-        argv[1] = const_cast<char*>(kDefault3DModel);\
+        argv[1] = const_cast<char*>(scene);\
     }\
     else {\
+       printf("Unable to find default model. Please check the README in the root folder and make sure you've run `python ./bootstrap.py` to download all the additional assets for this project.\n");\
        exit(-1);\
     }
+    */
 
 namespace raptor {
 
