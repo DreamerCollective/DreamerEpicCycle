@@ -81,7 +81,7 @@ endif()
 
 if (WIN32)
     target_link_libraries(RaptorGraphics PRIVATE
-        assimp-vc142-mt
+        assimp-vc143-mt
         SDL2)
 else()
     target_link_libraries(RaptorGraphics PRIVATE
@@ -100,8 +100,8 @@ target_link_libraries(RaptorGraphics PRIVATE
 
 if (WIN32)
     set(DLLS_TO_COPY
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../binaries/SDL2-2.0.18/lib/x64/SDL2.dll
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../binaries/assimp/windows/bin/assimp-vc142-mt.dll
+        ${CMAKE_SOURCE_DIR}/binaries/SDL2-2.0.18/lib/x64/SDL2.dll
+        ${CMAKE_SOURCE_DIR}/binaries/assimp/windows/bin/assimp-vc143-mt.dll
     )
 
     foreach(DLL ${DLLS_TO_COPY})
