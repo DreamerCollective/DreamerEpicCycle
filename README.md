@@ -5,10 +5,9 @@ The code has been tested with the following software:
 - Visual Studio 2019 Community Edition 16.11.8 (Windows)
 - gcc 9 (Linux)
 - CMake 3.22.1
-- Vulkan SDK 1.2.198.1 or above
+- Vulkan SDK 1.3.275.0 or above
 - SDL version 2.0.18
 - assimp 5.2.2
-- vulkan 1.3.275.0
 
 To download the glTF assets using the bootstrap script, run the following command: `python ./bootstrap.py`
 
