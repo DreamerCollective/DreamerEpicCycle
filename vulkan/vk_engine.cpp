@@ -660,7 +660,7 @@ void VulkanEngine::update_scene()
 
 
    // for (int i = 0; i < 16; i++)         {
-        loadedScenes["SectorDensity"]->Draw(glm::mat4{ 1.f }, drawCommands);
+        loadedScenes["Galaxy 1m Optimized"]->Draw(glm::mat4{ 1.f }, drawCommands);
     //}
 	
 }
@@ -1087,12 +1087,12 @@ void VulkanEngine::init_sync_structures()
 
 void VulkanEngine::init_renderables()
 {
-    std::string LegionaryPath = { "..\\..\\assets\\Sector Density.glb" };
-    auto LegionaryFile = loadGltf(this,LegionaryPath);
+    std::string ObjectFilePath = { "..\\..\\assets\\Galaxy 1m Optimized.glb" };
+    auto ObjectFile = loadGltf(this,ObjectFilePath);
 
-    assert(LegionaryFile.has_value());
+    assert(ObjectFile.has_value());
 
-    loadedScenes["SectorDensity"] = *LegionaryFile;
+    loadedScenes["Galaxy 1m Optimized"] = *ObjectFile;
 }
 
 void VulkanEngine::init_imgui()
